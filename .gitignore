@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .vscode
+/.idea/workspace.xml
+/.idea/vcs.xml
+/.idea/inspectionProfiles/Project_Default.xml

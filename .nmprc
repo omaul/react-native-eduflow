@@ -1,0 +1,4 @@
+registry=https://nexus.kontur.host/repository/kontur-npm-group/
+
+package-lock=true
+legacy-peer-deps=true

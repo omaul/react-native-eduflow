@@ -13,6 +13,10 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .Brand {
@@ -21,20 +25,88 @@
   font-weight: 600;
 }
 
+.Nav { display: flex; align-items: center; }
+.Nav__right { display: flex; align-items: center; gap: 10px; }
+
+.IconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  color: #111;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.IconLink:hover { background: #f6f6f6; border-color: #eee; }
+
+.Burger {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+.Burger__bars {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background: #111;
+  position: relative;
+}
+
+.Burger__bars::before,
+.Burger__bars::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: #111;
+}
+
+.Burger__bars::before { top: -6px; }
+.Burger__bars::after { top: 6px; }
+
+.MobileMenu {
+  position: absolute;
+  right: 16px;
+  top: 56px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 6px;
+  display: none;
+  min-width: 180px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+.MobileMenu__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #111;
+  border-radius: 6px;
+}
+
+.MobileMenu__item:hover { background: #f6f6f6; }
+
+/* Content */
 .Main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
 }
 
-.Container {
-  padding: 8px 0;
-}
+.Container { padding: 8px 0; }
 
-.Title {
-  margin: 0 0 12px;
-  font-size: 20px;
-}
+.Title { margin: 0 0 12px; font-size: 20px; }
 
 .NotesList {
   list-style: none;
@@ -45,8 +117,7 @@
   gap: 8px;
 }
 
-.NotesList__item {
-}
+.NotesList__item {}
 
 .NoteLink {
   display: block;
@@ -57,48 +128,27 @@
   color: #111;
 }
 
-.NoteLink:hover {
-  border-color: #ddd;
-  background: #fafafa;
-}
+.NoteLink:hover { border-color: #ddd; background: #fafafa; }
 
-.NoteTitle {
-  font-weight: 600;
-}
+.NoteTitle { font-weight: 600; }
 
-.NoteDescription {
-  color: #555;
-  margin-top: 4px;
-}
+.NoteDescription { color: #555; margin-top: 4px; }
 
-.NoteMeta {
-  margin-top: 6px;
-  color: #888;
-  font-size: 12px;
-}
+.NoteMeta { margin-top: 6px; color: #888; font-size: 12px; }
 
-.Back {
-  margin-bottom: 12px;
-}
+.Back { margin-bottom: 12px; }
 
-.Markdown {
-  line-height: 1.7;
-}
+.Markdown { line-height: 1.7; }
 
-.Markdown h1, .Markdown h2, .Markdown h3 {
-  margin-top: 1.6em;
-}
+.Markdown h1, .Markdown h2, .Markdown h3 { margin-top: 1.6em; }
 
-.Markdown pre {
-  background: #0f172a;
-  color: #e2e8f0;
-  padding: 12px;
-  border-radius: 6px;
-  overflow: auto;
-}
+.Markdown pre { background: #0f172a; color: #e2e8f0; padding: 12px; border-radius: 6px; overflow: auto; }
 
-.Markdown code {
-  background: #f1f5f9;
-  padding: 2px 6px;
-  border-radius: 4px;
+.Markdown code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+
+/* Responsive: on small screens show burger and dropdown; hide desktop icon links */
+@media (max-width: 640px) {
+  .IconLink { display: none; }
+  .Burger { display: inline-flex; align-items: center; justify-content: center; }
+  .MobileMenu { display: block; }
 }

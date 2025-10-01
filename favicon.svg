@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Leaf favicon</title>
+  <rect width="64" height="64" rx="12" fill="#f8fafc"/>
+  <path d="M12 36C12 22 28 10 42 12C52 14 56 28 46 40C36 52 20 54 14 44C12 40 12 36 12 36Z" fill="#16a34a"/>
+  <path d="M22 46C32 36 38 30 46 26" stroke="#14532d" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="40" cy="22" r="2" fill="#22c55e"/>
+</svg>
+

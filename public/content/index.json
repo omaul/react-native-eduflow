@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "welcome",
+    "title": "Добро пожаловать",
+    "description": "Короткое приветствие и объяснение как всё работает",
+    "tags": ["intro"],
+    "date": "2025-10-01"
+  },
+  {
+    "slug": "react-notes",
+    "title": "Заметки по React",
+    "description": "Полезные ссылки и заметки",
+    "tags": ["react", "notes"],
+    "date": "2025-10-01"
+  }
+]
+

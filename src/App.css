@@ -1,38 +1,104 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 12px 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Brand {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.Main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Container {
+  padding: 8px 0;
+}
+
+.Title {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.NotesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.NotesList__item {
+}
+
+.NoteLink {
+  display: block;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #111;
+}
+
+.NoteLink:hover {
+  border-color: #ddd;
+  background: #fafafa;
+}
+
+.NoteTitle {
+  font-weight: 600;
+}
+
+.NoteDescription {
+  color: #555;
+  margin-top: 4px;
+}
+
+.NoteMeta {
+  margin-top: 6px;
+  color: #888;
+  font-size: 12px;
+}
+
+.Back {
+  margin-bottom: 12px;
+}
+
+.Markdown {
+  line-height: 1.7;
+}
+
+.Markdown h1, .Markdown h2, .Markdown h3 {
+  margin-top: 1.6em;
+}
+
+.Markdown pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+.Markdown code {
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
 }

@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import NoteViewer from './pages/NoteViewer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Привет, как дела?
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Почитать всякое
-        </a>
-      </header>
+      <HashRouter>
+        <header className="Header">
+          <div className="Header__inner">
+            <Link to="/" className="Brand">Some Notes</Link>
+          </div>
+        </header>
+        <main className="Main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/note/:slug" element={<NoteViewer />} />
+          </Routes>
+        </main>
+      </HashRouter>
     </div>
   );
 }

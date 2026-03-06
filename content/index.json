@@ -1,59 +1,73 @@
-[
-  {
-    "slug": "welcome",
-    "title": "Добро пожаловать",
-    "description": "Короткое приветствие и объяснение как всё работает",
-    "tags": ["intro"],
-    "date": "2025-10-01"
+{
+  "folders": {
+    "plants": {
+      "title": "Растения",
+      "theme": "plants",
+      "accent": "#4a7c59"
+    },
+    "guides": {
+      "title": "Гайды"
+    },
+    "cookbook": {
+      "title": "Рецепты"
+    }
   },
-  {
-    "slug": "guides/react/basics",
-    "title": "React: основы",
-    "description": "Компоненты, состояние, эффекты",
-    "tags": ["react"],
-    "date": "2025-10-01"
-  },
-  {
-    "slug": "guides/react/advanced",
-    "title": "React: продвинуто",
-    "description": "Роутинг, markdown, деплой",
-    "tags": ["react"],
-    "date": "2025-10-01"
-  },
-  {
-    "slug": "cookbook/markdown-images",
-    "title": "Markdown: картинки и ссылки",
-    "description": "Примеры относительных путей в папке заметки",
-    "tags": ["markdown"],
-    "date": "2025-10-01"
-  },
-  {
-    "slug": "plants/medium/definitions",
-    "title": "Термины: грунт и субстрат",
-    "description": "Что это и зачем различать",
-    "tags": ["plants", "base"],
-    "date": "2025-10-01"
-  },
-  {
-    "slug": "plants/medium/soil-vs-substrate",
-    "title": "Грунт vs субстрат дома",
-    "description": "Почему лесная земля и дешёвые смеси опасны",
-    "tags": ["plants", "safety"],
-    "date": "2025-10-01"
-  },
-  {
-    "slug": "plants/medium/why-loose",
-    "title": "Рыхлый субстрат и аэрация",
-    "description": "Влагоудержание + дренаж",
-    "tags": ["plants", "physics"],
-    "date": "2025-10-01"
-  },
-  {
-    "slug": "plants/medium/transplant-stress",
-    "title": "Стресс при смене субстрата",
-    "description": "Почему важно подбирать среду",
-    "tags": ["plants", "practice"],
-    "date": "2025-10-01"
-  }
-]
-
+  "notes": [
+    {
+      "slug": "welcome",
+      "title": "Добро пожаловать",
+      "description": "Короткое приветствие и объяснение как всё работает",
+      "tags": ["intro"],
+      "date": "2025-10-01"
+    },
+    {
+      "slug": "guides/react/basics",
+      "title": "React: основы",
+      "description": "Компоненты, состояние, эффекты",
+      "tags": ["react"],
+      "date": "2025-10-01"
+    },
+    {
+      "slug": "guides/react/advanced",
+      "title": "React: продвинуто",
+      "description": "Роутинг, markdown, деплой",
+      "tags": ["react"],
+      "date": "2025-10-01"
+    },
+    {
+      "slug": "cookbook/markdown-images",
+      "title": "Markdown: картинки и ссылки",
+      "description": "Примеры относительных путей в папке заметки",
+      "tags": ["markdown"],
+      "date": "2025-10-01"
+    },
+    {
+      "slug": "plants/medium/definitions",
+      "title": "Термины: грунт и субстрат",
+      "description": "Что это и зачем различать",
+      "tags": ["plants", "base"],
+      "date": "2025-10-01"
+    },
+    {
+      "slug": "plants/medium/soil-vs-substrate",
+      "title": "Грунт vs субстрат дома",
+      "description": "Почему лесная земля и дешёвые смеси опасны",
+      "tags": ["plants", "safety"],
+      "date": "2025-10-01"
+    },
+    {
+      "slug": "plants/medium/why-loose",
+      "title": "Рыхлый субстрат и аэрация",
+      "description": "Влагоудержание + дренаж",
+      "tags": ["plants", "physics"],
+      "date": "2025-10-01"
+    },
+    {
+      "slug": "plants/medium/transplant-stress",
+      "title": "Стресс при смене субстрата",
+      "description": "Почему важно подбирать среду",
+      "tags": ["plants", "practice"],
+      "date": "2025-10-01"
+    }
+  ]
+}

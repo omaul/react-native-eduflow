@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-native-eduflow/static/css/main.dccbf4c4.css",
-    "main.js": "/react-native-eduflow/static/js/main.ffa7a1f8.js",
+    "main.js": "/react-native-eduflow/static/js/main.6b50458c.js",
     "static/js/453.462572bc.chunk.js": "/react-native-eduflow/static/js/453.462572bc.chunk.js",
     "index.html": "/react-native-eduflow/index.html",
     "main.dccbf4c4.css.map": "/react-native-eduflow/static/css/main.dccbf4c4.css.map",
-    "main.ffa7a1f8.js.map": "/react-native-eduflow/static/js/main.ffa7a1f8.js.map",
+    "main.6b50458c.js.map": "/react-native-eduflow/static/js/main.6b50458c.js.map",
     "453.462572bc.chunk.js.map": "/react-native-eduflow/static/js/453.462572bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dccbf4c4.css",
-    "static/js/main.ffa7a1f8.js"
+    "static/js/main.6b50458c.js"
   ]
 }

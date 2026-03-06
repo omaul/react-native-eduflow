@@ -1,7 +1,10 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { useNotes } from '../hooks/useNotes';
+import { getTopLevelFolder } from '../utils/folders';
+import ThemeBackground from '../components/ThemeBackground';
 
 type Params = {
   slug?: string;
@@ -15,9 +18,29 @@ function useEffectiveSlug() {
 
 export default function NoteViewer() {
   const effectiveSlug = useEffectiveSlug();
+  const [searchParams] = useSearchParams();
+  const { folders } = useNotes();
   const [md, setMd] = React.useState<string | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [basePath, setBasePath] = React.useState<string>(`${process.env.PUBLIC_URL}/content/`);
+
+  const topFolder = getTopLevelFolder(effectiveSlug);
+  const folderMeta = folders[topFolder];
+  const theme = folderMeta?.theme;
+  const accent = folderMeta?.accent;
+
+  // Back link logic
+  const from = searchParams.get('from');
+  const fromFolder = searchParams.get('folder');
+  let backTo = '/';
+  let backLabel = '← На главную';
+  if (from === 'all') {
+    backTo = '/all';
+    backLabel = '← Ко всем заметкам';
+  } else if (from === 'folder' && fromFolder) {
+    backTo = `/folder/${encodeURIComponent(fromFolder)}`;
+    backLabel = `← ${folderMeta?.title || fromFolder}`;
+  }
 
   React.useEffect(() => {
     let cancelled = false;
@@ -53,7 +76,10 @@ export default function NoteViewer() {
           setBasePath(`${contentRoot}${dir}`);
           return;
         }
-        if (!cancelled) throw new Error('Не удалось загрузить заметку');
+        if (!cancelled) {
+          setError('Не удалось загрузить заметку');
+          setMd(null);
+        }
       } catch (e: any) {
         if (!cancelled) {
           setError(e?.message || 'Ошибка');
@@ -74,21 +100,22 @@ export default function NoteViewer() {
   };
 
   return (
-    <div className="Container">
-      <div className="Back">
-        <Link to="/">← Ко всем заметкам</Link>
+    <div className="Container ThemedPage" style={accent ? { '--theme-accent': accent } as React.CSSProperties : undefined}>
+      {theme && <ThemeBackground theme={theme} seed={effectiveSlug} />}
+      <div className="ThemedPage__content">
+        <div className="Back">
+          <Link to={backTo}>{backLabel}</Link>
+        </div>
+        {error && <p>Ошибка: {error}</p>}
+        {!error && !md && <p>Загрузка…</p>}
+        {md && (
+          <article className="Markdown">
+            <ReactMarkdown remarkPlugins={[remarkGfm]} urlTransform={transformUri}>
+              {md}
+            </ReactMarkdown>
+          </article>
+        )}
       </div>
-      {error && <p>Ошибка: {error}</p>}
-      {!error && !md && <p>Загрузка…</p>}
-      {md && (
-        <article className="Markdown">
-          <ReactMarkdown remarkPlugins={[remarkGfm]} urlTransform={transformUri}>
-            {md}
-          </ReactMarkdown>
-        </article>
-      )}
     </div>
   );
 }
-
-

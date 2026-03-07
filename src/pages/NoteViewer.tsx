@@ -33,13 +33,13 @@ export default function NoteViewer() {
   const from = searchParams.get('from');
   const fromFolder = searchParams.get('folder');
   let backTo = '/';
-  let backLabel = '\u2190 На главную';
+  let backLabel = 'На главную';
   if (from === 'all') {
     backTo = '/all';
-    backLabel = '\u2190 Ко всем заметкам';
+    backLabel = 'Ко всем заметкам';
   } else if (from === 'folder' && fromFolder) {
     backTo = `/folder/${encodeURIComponent(fromFolder)}`;
-    backLabel = `\u2190 ${folderMeta?.title || fromFolder}`;
+    backLabel = folderMeta?.title || fromFolder;
   }
 
   React.useEffect(() => {
@@ -107,7 +107,10 @@ export default function NoteViewer() {
       {theme && <ThemeBackground theme={theme} seed={effectiveSlug} />}
       <div className={s.themedPageContent}>
         <div className={s.back}>
-          <Link to={backTo}>{backLabel}</Link>
+          <Link to={backTo}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5" /><path d="m12 19-7-7 7-7" /></svg>
+            {backLabel}
+          </Link>
         </div>
         {error && (
           <div className={s.errorBlock}>

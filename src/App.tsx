@@ -1,11 +1,13 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import { SunIcon, MoonIcon } from './components/Icons';
 import Home from './pages/Home';
 import NoteViewer from './pages/NoteViewer';
 import Folders from './pages/Folders';
 import FolderView from './pages/FolderView';
 import AllNotes from './pages/AllNotes';
 import { useTheme } from './hooks/useTheme';
+import headerStyles from './components/Header.module.css';
 import shared from './styles/shared.module.css';
 
 function ThemeToggleButton() {
@@ -15,21 +17,9 @@ function ThemeToggleButton() {
       onClick={toggle}
       aria-label={theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'}
       title={theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 36,
-        height: 36,
-        borderRadius: 'var(--radius-md)',
-        border: '1px solid transparent',
-        background: 'none',
-        color: 'var(--color-text)',
-        cursor: 'pointer',
-        fontSize: '18px',
-      }}
+      className={headerStyles.themeToggle}
     >
-      {theme === 'dark' ? '\u2600' : '\u263E'}
+      {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }

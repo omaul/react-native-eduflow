@@ -31,12 +31,13 @@
 .nav {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .navRight {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-2);
 }
 
 .iconLink {
@@ -49,6 +50,10 @@
   color: var(--color-text);
   text-decoration: none;
   border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
   transition: background var(--duration-fast) var(--easing-default),
               border-color var(--duration-fast) var(--easing-default);
 }
@@ -63,8 +68,8 @@
 
 .burger {
   display: none;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   background: var(--color-bg);
@@ -97,7 +102,7 @@
 .mobileMenu {
   position: absolute;
   right: var(--space-4);
-  top: 56px;
+  top: calc(100% + var(--space-2));
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -124,8 +129,13 @@
   text-decoration: none;
 }
 
+.themeToggle {
+  composes: iconLink;
+}
+
 @media (max-width: 640px) {
   .iconLink { display: none; }
+  .themeToggle { display: inline-flex; }
   .burger {
     display: inline-flex;
     align-items: center;

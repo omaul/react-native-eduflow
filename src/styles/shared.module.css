@@ -42,6 +42,7 @@
   border-radius: var(--radius-md);
   text-decoration: none;
   color: var(--color-text);
+  cursor: pointer;
   transition: border-color var(--duration-fast) var(--easing-default),
               background var(--duration-fast) var(--easing-default);
 }
@@ -67,6 +68,59 @@
   font-size: var(--text-xs);
 }
 
+/* --- Loading skeleton --- */
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.skeletonLine {
+  height: var(--space-4);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-sm);
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonLine:nth-child(1) { width: 40%; }
+.skeletonLine:nth-child(2) { width: 100%; }
+.skeletonLine:nth-child(3) { width: 85%; }
+.skeletonLine:nth-child(4) { width: 70%; }
+
+/* --- Error state --- */
+
+.errorBlock {
+  padding: var(--space-4);
+  background: var(--color-error-bg);
+  border-left: 3px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+}
+
+.errorBlock p {
+  margin: 0 0 var(--space-3);
+}
+
+.retryButton {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font: inherit;
+  transition: background var(--duration-fast) var(--easing-default),
+              border-color var(--duration-fast) var(--easing-default);
+}
+
+.retryButton:hover {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-border-hover);
+}
+
 /* --- Themed page (with p5.js background) --- */
 
 .themedPage {
@@ -85,6 +139,19 @@
 
 .themedPage .title {
   color: var(--theme-accent);
+}
+
+.themedPage .noteLink {
+  background: var(--color-bg-glass);
+  border-color: var(--color-border-glass);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border-radius: var(--radius-lg);
+}
+
+.themedPage .noteLink:hover {
+  background: var(--color-bg-glass);
+  border-color: var(--color-border-hover);
 }
 
 /* --- Markdown --- */
@@ -140,7 +207,7 @@
 
 .markdown code {
   background: var(--color-code-bg);
-  padding: 2px 6px;
+  padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-sm);
   font-size: 0.9em;
 }

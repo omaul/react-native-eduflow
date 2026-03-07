@@ -44,6 +44,13 @@ a:hover {
   outline-offset: 2px;
 }
 
+/* ===== Skeleton loading ===== */
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
 /* ===== Reduced motion ===== */
 
 @media (prefers-reduced-motion: reduce) {

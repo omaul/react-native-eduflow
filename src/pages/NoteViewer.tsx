@@ -106,8 +106,20 @@ export default function NoteViewer() {
         <div className={s.back}>
           <Link to={backTo}>{backLabel}</Link>
         </div>
-        {error && <p>Ошибка: {error}</p>}
-        {!error && !md && <p>Загрузка…</p>}
+        {error && (
+          <div className={s.errorBlock}>
+            <p>Не удалось загрузить заметку</p>
+            <button className={s.retryButton} onClick={() => window.location.reload()}>Попробовать снова</button>
+          </div>
+        )}
+        {!error && !md && (
+          <div className={s.skeleton}>
+            <div className={s.skeletonLine} />
+            <div className={s.skeletonLine} />
+            <div className={s.skeletonLine} />
+            <div className={s.skeletonLine} />
+          </div>
+        )}
         {md && (
           <article className={s.markdown}>
             <ReactMarkdown remarkPlugins={[remarkGfm]} urlTransform={transformUri}>

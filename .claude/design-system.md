@@ -6,6 +6,7 @@
 
 ## Визуальная концепция
 
+**Тип продукта:** Knowledge Base / Образовательная платформа
 **Базовый стиль: Минимализм** — чистота, сетка, типографика, пространство.
 Поверх него — два акцентных режима, которые применяются точечно:
 
@@ -60,12 +61,26 @@
 | `--color-code-block-bg` | Блок кода | Очень тёмный | Очень тёмный |
 | `--color-code-block-text` | Текст в блоке кода | Светлый | Светлый |
 
+### Семантические цвета
+
+| Токен | Роль | Когда использовать |
+|-------|------|--------------------|
+| `--color-success` | Успех, правильный ответ | Квизы (верно), toast-уведомления |
+| `--color-success-bg` | Фон успешного состояния | Подложка для success-сообщений |
+| `--color-warning` | Предупреждение | Callout-блоки "внимание", незавершённые действия |
+| `--color-warning-bg` | Фон предупреждения | Подложка для warning-сообщений |
+| `--color-error` | Ошибка, неправильный ответ | Квизы (неверно), ошибки загрузки |
+| `--color-error-bg` | Фон ошибки | Подложка для error-сообщений |
+| `--color-info` | Информация, подсказка | Callout-блоки "на заметку", tips |
+| `--color-info-bg` | Фон информации | Подложка для info-сообщений |
+
 ### Правила цветов
 
 - **Все цвета — только через токены.** Никогда hex/rgb напрямую в компонентах.
 - **Контраст:** текст к фону >= 4.5:1 (WCAG AA), крупный текст >= 3:1. Проверяй в обеих темах.
 - **Информация не передаётся только цветом** — всегда дублируй иконкой или текстом.
 - **Тема папки** переопределяет `--theme-accent` через inline style. Это единственное место с конкретными значениями из index.json.
+- **Семантические цвета** не зависят от темы папки — они глобальные и стабильные.
 
 ### Переключение тем
 
@@ -80,20 +95,55 @@
 |-------|------|
 | `--font-sans` | Основной шрифт (системный стек) |
 | `--font-mono` | Код, brutalism-акценты |
-| `--text-xs` … `--text-2xl` | Шкала размеров (минимум 16px для body на мобильных) |
+| `--text-xs` ... `--text-3xl` | Шкала размеров (минимум 16px для body на мобильных) |
 | `--leading-tight/normal/relaxed` | line-height: плотный / обычный / для чтения |
 | `--weight-normal/medium/semibold/bold` | Вес шрифта (bold = 700, для brutalism-элементов) |
+
+#### Рекомендация: веб-шрифты (опционально)
+
+Системный стек — хорошая база. Если захочется более характерного вида, подходящие пары для образовательного контента:
+
+| Вариант | Заголовки | Текст | Настроение |
+|---------|-----------|-------|------------|
+| **Geometric Modern** | Outfit | Work Sans | Современный, чистый, балансированный |
+| **Classic Elegant** | Playfair Display | Inter | Элегантный, редакционный, премиальный |
+| **Modern Professional** | Poppins | Open Sans | Профессиональный, дружелюбный |
+
+При подключении шрифтов: `font-display: swap` + похожий fallback для предотвращения FOIT.
 
 ### Пространство и форма
 
 | Токен | Роль |
 |-------|------|
-| `--space-1` … `--space-8` | Шкала отступов |
+| `--space-1` ... `--space-8` | Шкала отступов (4px ... 32px) |
 | `--radius-none` | 0px — для brutalism-элементов |
-| `--radius-sm/md/lg` | Скругления для минимализма |
+| `--radius-sm/md/lg` | Скругления для минимализма (4/6/8px) |
 | `--blur-glass` | blur для glassmorphism (12-20px) |
 | `--shadow-sm/md/lg` | Тени (использовать редко) |
-| `--max-width-content` | Ограничение ширины текста (65-75ch) |
+| `--max-width-content` | Ограничение ширины текста (800px, ~65-75ch) |
+
+### Переходы
+
+| Токен | Значение | Когда |
+|-------|----------|-------|
+| `--duration-fast` | 150ms | Ховеры, мелкие взаимодействия |
+| `--duration-normal` | 200ms | Переключение тем, смена состояний |
+| `--easing-default` | ease-out | Все UI-переходы (ease-out для появления, ease-in для исчезновения) |
+
+Правило: **150-300ms** для микро-взаимодействий. Никогда > 500ms для UI-переходов. Линейный easing — только для progress-баров.
+
+### Z-index шкала
+
+| Уровень | Z-index | Назначение |
+|---------|---------|------------|
+| Фон | 0 | p5.js canvas, декоративные элементы |
+| Контент | 1 | Основной контент страницы |
+| Header | 2 | Sticky-навигация |
+| Dropdown | 3 | Выпадающие меню, мобильное меню |
+| Overlay | 5 | Оверлеи, затемнение фона |
+| Modal | 10 | Модальные окна, toast-уведомления |
+
+Использовать только эти уровни. Никаких `z-index: 9999`.
 
 ### Breakpoints
 
@@ -101,6 +151,8 @@
 |-------|---------|
 | `--bp-sm` (640px) | Мобильный -> планшет |
 | `--bp-md` (768px) | Планшет -> десктоп |
+
+Подход: **mobile-first**. Начинай со стилей для мобильных, расширяй через `@media (min-width)`.
 
 ---
 
@@ -120,16 +172,19 @@
 | Severity | Правило | Делай | Не делай |
 |----------|---------|-------|----------|
 | HIGH | Content shift | Резервируй место для асинхронного контента (aspect-ratio, фиксированная высота) | Изображения/контент сдвигают лейаут при загрузке |
-| HIGH | Z-index | Определи шкалу: 0 (фон) → 1 (контент) → 2 (header) → 3 (dropdown) → 10 (модальные) | Произвольные z-index: 9999 |
+| HIGH | Z-index | Используй определённую шкалу (см. выше) | Произвольные z-index: 9999 |
 | MEDIUM | Viewport units | Используй `dvh` или учитывай мобильный browser chrome | `100vh` для полноэкранных мобильных лейаутов |
 | MEDIUM | Ширина текста | Ограничивай 65-75 символов на строку (`--max-width-content`) | Текст на всю ширину экрана |
+| HIGH | Stacking context | Помни, что `position`, `opacity<1`, `transform` создают новый stacking context | Ожидай, что z-index работает сквозь контексты |
 
 ### Интерактивность
 
 | Severity | Правило | Делай | Не делай |
 |----------|---------|-------|----------|
 | HIGH | Focus-состояние | Видимый `focus-visible` ring на всех интерактивных элементах | `outline: none` без замены |
+| HIGH | Cursor | `cursor: pointer` на всех кликабельных элементах | Дефолтный курсор на интерактивных элементах |
 | MEDIUM | Hover | Изменяй курсор + тонкое визуальное изменение (150-250ms) | Никакого фидбека при наведении |
+| HIGH | Hover vs Tap | Не полагайся только на hover — touch-устройства его не имеют | `onMouseEnter` для критичных действий |
 | HIGH | Disabled-состояние | opacity + `cursor-not-allowed` | Disabled выглядит как enabled |
 | HIGH | Кнопка загрузки | Блокируй кнопку + показывай spinner при async-действии | Позволяй многократные клики |
 | HIGH | Tap-target | Минимум 44x44px на мобильных | Мелкие кнопки 24x24 |
@@ -148,7 +203,7 @@
 
 | Severity | Правило | Делай | Не делай |
 |----------|---------|-------|----------|
-| MEDIUM | Line-height | 1.5-1.75 для body-текста | `line-height: 1` для читаемого текста |
+| MEDIUM | Line-height | 1.5-1.75 для body-текста (`--leading-relaxed` для markdown) | `line-height: 1` для читаемого текста |
 | HIGH | Размер на мобильных | Минимум 16px для body | Мелкий текст 12px для основного контента |
 | MEDIUM | Иерархия заголовков | Явная разница в размере и весе между h1/h2/h3 | Заголовки неотличимы от body |
 | MEDIUM | Font loading | `font-display: swap` + похожий fallback | Невидимый текст при загрузке шрифта (FOIT) |
@@ -161,7 +216,7 @@
 | HIGH | Семантика | `<nav>`, `<main>`, `<article>`, `<button>`, `<a>` | `<div>` для всего |
 | HIGH | ARIA | `aria-label` на кнопках-иконках без текста | `<button><Icon/></button>` без label |
 | HIGH | Keyboard | Tab-порядок совпадает с визуальным | Элементы недоступны с клавиатуры |
-| MEDIUM | Heading hierarchy | Последовательно h1 → h2 → h3 | Пропуск уровней (h1 → h4) |
+| MEDIUM | Heading hierarchy | Последовательно h1 -> h2 -> h3 | Пропуск уровней (h1 -> h4) |
 | HIGH | Reduced motion | Проверяй `prefers-reduced-motion` для p5.js canvas | Игнорируй настройки пользователя |
 | HIGH | Alt-текст | Описательный alt для контентных изображений, `alt=""` для декоративных | Пустой alt для значимых изображений |
 
@@ -182,6 +237,7 @@
 | HIGH | Изображения | WebP, srcset, `loading="lazy"` для below-fold | Неоптимизированные 4000px картинки |
 | MEDIUM | Шрифты | `font-display: swap`, ограничивай число начертаний | Загружай 8 начертаний одного шрифта |
 | MEDIUM | CSS-анимации | `transform` и `opacity` для анимаций (если нужны) | Анимируй `width`, `height`, `top`, `left` |
+| MEDIUM | Lazy loading | Загружай below-fold контент по мере скролла | Всё грузить разом |
 
 ---
 
@@ -190,49 +246,205 @@
 ### Создание компонента
 
 1. Создай `src/components/Name.tsx` + `src/components/Name.module.css`
-2. Все значения — через токены `var(--…)`
+2. Все значения — через токены `var(--...)`
 3. Проверь UX-правила выше (особенно доступность и интерактивность)
 4. Компонент не зависит от контекста страницы
 
 ### Карточка (минимализм — по умолчанию)
 
-```
-Рамка: --color-border, radius: --radius-md
-Hover: --color-border-hover, bg: --color-bg-subtle
-Стиль: плоский, без теней
+```css
+border: 1px solid var(--color-border);
+border-radius: var(--radius-md);
+/* Hover: */
+border-color: var(--color-border-hover);
+background: var(--color-bg-subtle);
+cursor: pointer; /* если кликабельна */
+transition: border-color var(--duration-fast) var(--easing-default),
+            background var(--duration-fast) var(--easing-default);
 ```
 
 ### Карточка (glass — на тематических страницах)
 
-```
-Фон: --color-bg-glass
-Рамка: --color-border-glass
-Blur: --blur-glass
-Radius: --radius-lg
-Обязательно: проверь контраст текста к размытому фону в обеих темах
+```css
+background: var(--color-bg-glass);
+border: 1px solid var(--color-border-glass);
+backdrop-filter: blur(var(--blur-glass));
+-webkit-backdrop-filter: blur(var(--blur-glass));
+border-radius: var(--radius-lg);
+/* Обязательно: проверь контраст текста к размытому фону в обеих темах */
+/* Для светлой темы: если фон светлый, увеличь opacity до 0.25+ */
 ```
 
 ### Карточка (brutalism — акцентные блоки)
 
+```css
+border: 2px solid var(--color-text);
+border-radius: var(--radius-none); /* 0px */
+font-family: var(--font-mono);
+font-weight: var(--weight-bold);
+/* Без теней, без ховер-анимаций, без transition */
 ```
-Рамка: 2-3px solid --color-text
-Radius: --radius-none (0px)
-Шрифт: --font-mono, --weight-bold
-Без теней, без ховер-анимаций
+
+### Кнопка (primary)
+
+```css
+background: var(--color-accent);
+color: var(--color-bg);
+border: none;
+border-radius: var(--radius-md);
+padding: var(--space-2) var(--space-4);
+font-weight: var(--weight-medium);
+cursor: pointer;
+transition: opacity var(--duration-fast) var(--easing-default);
+/* Hover: opacity: 0.85 */
+/* Disabled: opacity: 0.5; cursor: not-allowed */
+/* Min touch target: 44px height */
+```
+
+### Кнопка (secondary / ghost)
+
+```css
+background: transparent;
+color: var(--color-text);
+border: 1px solid var(--color-border);
+border-radius: var(--radius-md);
+padding: var(--space-2) var(--space-4);
+cursor: pointer;
+transition: background var(--duration-fast) var(--easing-default),
+            border-color var(--duration-fast) var(--easing-default);
+/* Hover: background: var(--color-bg-subtle); border-color: var(--color-border-hover) */
+```
+
+### Кнопка-иконка
+
+```css
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 36px;  /* min 44px на мобильных */
+height: 36px;
+border-radius: var(--radius-md);
+border: 1px solid transparent;
+background: transparent;
+color: var(--color-text);
+cursor: pointer;
+/* Hover: background: var(--color-bg-subtle); border-color: var(--color-border) */
+/* Обязательно: aria-label="..." */
+```
+
+### Бейдж / тег
+
+```css
+display: inline-block;
+padding: var(--space-1) var(--space-2);
+background: var(--color-bg-muted);
+color: var(--color-text-secondary);
+border-radius: var(--radius-sm);
+font-size: var(--text-xs);
+font-weight: var(--weight-medium);
+```
+
+### Toast / уведомление
+
+```css
+position: fixed;
+bottom: var(--space-4);
+right: var(--space-4);
+z-index: 10; /* Modal уровень */
+padding: var(--space-3) var(--space-4);
+border-radius: var(--radius-md);
+box-shadow: var(--shadow-lg);
+/* Варианты: */
+/* Success: background: var(--color-success-bg); border-left: 3px solid var(--color-success) */
+/* Error: background: var(--color-error-bg); border-left: 3px solid var(--color-error) */
+/* Auto-dismiss: 3-5 сек */
 ```
 
 ### Навигация
 
 - Sticky, фон `--color-bg` (или glass на тематических страницах)
 - Контент ограничен `--max-width-content`
-- Мобильное меню на `< --bp-sm`
+- Мобильное меню на `< --bp-sm` (640px)
+- `cursor: pointer` на всех кликабельных элементах навигации
+- SVG-иконки (не emoji) для навигационных элементов
 
 ### Markdown-контент
 
-- `line-height: --leading-relaxed`
-- Заголовки: увеличенный верхний отступ
+- `line-height: --leading-relaxed` (1.7)
+- Заголовки: увеличенный верхний отступ (1.6em)
 - Код: стилизуется через `--color-code-*`
-- Изображения: `max-width: 100%`, radius: `--radius-md`
+- Изображения: `max-width: 100%`, `height: auto`, radius: `--radius-md`
+- Таблицы: `overflow-x: auto` обёртка для мобильных
+
+### Skeleton-загрузка
+
+```css
+/* Placeholder для контента */
+background: var(--color-bg-muted);
+border-radius: var(--radius-sm);
+/* Анимация пульсации — единственное исключение из правила "без CSS-анимаций" */
+animation: skeleton-pulse 1.5s ease-in-out infinite;
+/* @keyframes skeleton-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.4 } } */
+/* Показывать только при ожидании > 300ms */
+```
+
+---
+
+## Светлая/тёмная тема: контрольные точки
+
+### Светлая тема
+
+| Проверка | Минимум |
+|----------|---------|
+| Основной текст к фону | >= 4.5:1 (#111 на #fff = 17.15:1) |
+| Вторичный текст к фону | >= 4.5:1 (#555 на #fff = 7.46:1) |
+| Muted текст к фону | >= 3:1 (#888 на #fff = 3.54:1) |
+| Glass-карточки | Увеличь opacity если текст не читается |
+| Рамки | Видимы на белом фоне |
+
+### Тёмная тема
+
+| Проверка | Минимум |
+|----------|---------|
+| Основной текст к фону | >= 4.5:1 (#e8e8e8 на #121212 = 13.3:1) |
+| Вторичный текст к фону | >= 4.5:1 (#a0a0a0 на #121212 = 7.1:1) |
+| Muted текст к фону | >= 3:1 (#666 на #121212 = 3.1:1) |
+| Glass-карточки | Проверь на тёмном p5.js фоне |
+| Тени | Усиленные (выше opacity) для видимости |
+
+---
+
+## Чеклист перед деливери
+
+### Визуальное качество
+- [ ] Нет emoji в качестве иконок (используй SVG)
+- [ ] Иконки из одного набора, единый размер viewBox
+- [ ] Hover-состояния не вызывают сдвиг лейаута (не используй scale для ховера)
+- [ ] Все цвета через токены, нет хардкода
+
+### Взаимодействия
+- [ ] `cursor: pointer` на всех кликабельных элементах
+- [ ] Hover-состояния с плавными переходами (150-300ms)
+- [ ] Focus-состояния видимы для клавиатурной навигации
+- [ ] Кнопки заблокированы при async-операциях
+
+### Светлая/тёмная тема
+- [ ] Текст читаем в обеих темах (контраст 4.5:1)
+- [ ] Glass-элементы видимы в светлой теме (opacity >= 0.18)
+- [ ] Рамки видимы в обеих темах
+- [ ] Протестировано в обоих режимах
+
+### Лейаут
+- [ ] Нет горизонтального скролла на мобильных
+- [ ] Контент не прячется за sticky-навигацией
+- [ ] Адаптивность: 375px, 768px, 1024px, 1440px
+- [ ] Touch-target >= 44x44px
+
+### Доступность
+- [ ] Изображения имеют alt-текст
+- [ ] Кнопки-иконки имеют aria-label
+- [ ] Цвет — не единственный индикатор
+- [ ] `prefers-reduced-motion` учтён
 
 ---
 
@@ -241,8 +453,11 @@ Radius: --radius-none (0px)
 - Не хардкодь цвета — только токены
 - Не смешивай brutalism + glassmorphism на одном экране
 - Не используй `!important`
-- Не используй z-index вне определённой шкалы (0/1/2/3/10)
-- Не добавляй CSS-анимации на UI (анимации = только p5.js)
+- Не используй z-index вне определённой шкалы (0/1/2/3/5/10)
+- Не добавляй CSS-анимации на UI (анимации = только p5.js, исключение: skeleton)
 - Не используй градиенты/свечения — стиль плоский (кроме glass-blur)
 - Не полагайся только на hover (touch-устройства его не имеют)
 - Не забывай тестировать в обеих темах (светлой и тёмной)
+- Не используй emoji как иконки в UI
+- Не используй `linear` easing для UI-переходов (кроме progress-баров)
+- Не анимируй `width`, `height`, `top`, `left` — только `transform` и `opacity`

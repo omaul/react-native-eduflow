@@ -11,9 +11,7 @@ export default function NoteMetaInfo({ date, tags }: NoteMetaInfoProps) {
   return (
     <div className={s.noteMeta}>
       {date && <span>{date}</span>}
-      {tags && tags.length > 0 && (
-        <span>{tags.map((t) => `#${t}`).join(' ')}</span>
-      )}
+      {tags && tags.length > 0 && <span>{tags.map((t) => `#${t}`).join(' ')}</span>}
     </div>
   );
 }

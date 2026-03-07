@@ -80,9 +80,9 @@ export default function NoteViewer() {
           setError('Не удалось загрузить заметку');
           setMd(null);
         }
-      } catch (e: any) {
+      } catch (e: unknown) {
         if (!cancelled) {
-          setError(e?.message || 'Ошибка');
+          setError(e instanceof Error ? e.message : 'Ошибка');
           setMd(null);
         }
       }
@@ -100,7 +100,10 @@ export default function NoteViewer() {
   };
 
   return (
-    <div className={`${s.container} ${s.themedPage}`} style={accent ? { '--theme-accent': accent } as React.CSSProperties : undefined}>
+    <div
+      className={`${s.container} ${s.themedPage}`}
+      style={accent ? ({ '--theme-accent': accent } as React.CSSProperties) : undefined}
+    >
       {theme && <ThemeBackground theme={theme} seed={effectiveSlug} />}
       <div className={s.themedPageContent}>
         <div className={s.back}>
@@ -109,7 +112,9 @@ export default function NoteViewer() {
         {error && (
           <div className={s.errorBlock}>
             <p>Не удалось загрузить заметку</p>
-            <button className={s.retryButton} onClick={() => window.location.reload()}>Попробовать снова</button>
+            <button className={s.retryButton} onClick={() => window.location.reload()}>
+              Попробовать снова
+            </button>
           </div>
         )}
         {!error && !md && (

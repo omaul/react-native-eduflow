@@ -7,24 +7,28 @@ import s from '../styles/shared.module.css';
 export default function Folders() {
   const { notes, folders, error } = useNotes();
 
-  if (error) return (
-    <div className={s.container}>
-      <div className={s.errorBlock}>
-        <p>Не удалось загрузить папки</p>
-        <button className={s.retryButton} onClick={() => window.location.reload()}>Попробовать снова</button>
+  if (error)
+    return (
+      <div className={s.container}>
+        <div className={s.errorBlock}>
+          <p>Не удалось загрузить папки</p>
+          <button className={s.retryButton} onClick={() => window.location.reload()}>
+            Попробовать снова
+          </button>
+        </div>
       </div>
-    </div>
-  );
-  if (!notes) return (
-    <div className={s.container}>
-      <div className={s.skeleton}>
-        <div className={s.skeletonLine} />
-        <div className={s.skeletonLine} />
-        <div className={s.skeletonLine} />
-        <div className={s.skeletonLine} />
+    );
+  if (!notes)
+    return (
+      <div className={s.container}>
+        <div className={s.skeleton}>
+          <div className={s.skeletonLine} />
+          <div className={s.skeletonLine} />
+          <div className={s.skeletonLine} />
+          <div className={s.skeletonLine} />
+        </div>
       </div>
-    </div>
-  );
+    );
 
   const folderToNotes = new Map<string, NoteMeta[]>();
   for (const n of notes) {
@@ -41,13 +45,15 @@ export default function Folders() {
       <ul className={s.notesList}>
         {folderKeys.map((f) => {
           const meta = folders[f];
-          const title = f === ROOT_FOLDER ? 'Без папки' : (meta?.title || f);
+          const title = f === ROOT_FOLDER ? 'Без папки' : meta?.title || f;
           return (
             <li key={f}>
               <Link
                 to={`/folder/${encodeURIComponent(f)}`}
                 className={s.noteLink}
-                style={meta?.accent ? { borderLeftColor: meta.accent, borderLeftWidth: 3 } : undefined}
+                style={
+                  meta?.accent ? { borderLeftColor: meta.accent, borderLeftWidth: 3 } : undefined
+                }
               >
                 <div className={s.noteTitle}>{title}</div>
                 <div className={s.noteMeta}>{folderToNotes.get(f)?.length || 0} заметок</div>

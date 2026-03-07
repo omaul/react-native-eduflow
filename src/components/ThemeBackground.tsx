@@ -10,7 +10,7 @@ interface ThemeBackgroundProps {
 
 export default function ThemeBackground({ theme, seed = '' }: ThemeBackgroundProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const instanceRef = useRef<any>(null);
+  const instanceRef = useRef<p5 | null>(null);
 
   useEffect(() => {
     const sketchFn = getSketch(theme, seed);

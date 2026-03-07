@@ -13,19 +13,20 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-sans), serif;
   font-size: var(--text-base);
   line-height: var(--leading-normal);
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background var(--duration-normal) var(--easing-default),
-              color var(--duration-normal) var(--easing-default);
+  transition:
+    background var(--duration-normal) var(--easing-default),
+    color var(--duration-normal) var(--easing-default);
 }
 
 code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), source-code-pro, monospace;
 }
 
 a {
@@ -47,8 +48,13 @@ a:hover {
 /* ===== Skeleton loading ===== */
 
 @keyframes skeleton-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 /* ===== Reduced motion ===== */

@@ -71,38 +71,68 @@ function createWaveLayers(p: p5, h: number): WaveLayer[] {
   return [
     // top wave — far background
     {
-      amplitude: p.random(6, 10), frequency: p.random(0.006, 0.01),
-      speed: p.random(0.003, 0.006), phase: p.random(p.TWO_PI),
-      yBase: h * 0.35, yFraction: 0.35,
-      hue: p.random(200, 220), saturation: 15, brightness: 85, alpha: 25,
+      amplitude: p.random(6, 10),
+      frequency: p.random(0.006, 0.01),
+      speed: p.random(0.003, 0.006),
+      phase: p.random(p.TWO_PI),
+      yBase: h * 0.35,
+      yFraction: 0.35,
+      hue: p.random(200, 220),
+      saturation: 15,
+      brightness: 85,
+      alpha: 25,
     },
     // upper-mid wave
     {
-      amplitude: p.random(8, 14), frequency: p.random(0.008, 0.012),
-      speed: p.random(0.004, 0.008), phase: p.random(p.TWO_PI),
-      yBase: h * 0.5, yFraction: 0.5,
-      hue: p.random(195, 215), saturation: 20, brightness: 80, alpha: 30,
+      amplitude: p.random(8, 14),
+      frequency: p.random(0.008, 0.012),
+      speed: p.random(0.004, 0.008),
+      phase: p.random(p.TWO_PI),
+      yBase: h * 0.5,
+      yFraction: 0.5,
+      hue: p.random(195, 215),
+      saturation: 20,
+      brightness: 80,
+      alpha: 30,
     },
     // mid wave
     {
-      amplitude: p.random(10, 18), frequency: p.random(0.01, 0.015),
-      speed: p.random(0.006, 0.012), phase: p.random(p.TWO_PI),
-      yBase: h * 0.65, yFraction: 0.65,
-      hue: p.random(190, 210), saturation: 28, brightness: 75, alpha: 40,
+      amplitude: p.random(10, 18),
+      frequency: p.random(0.01, 0.015),
+      speed: p.random(0.006, 0.012),
+      phase: p.random(p.TWO_PI),
+      yBase: h * 0.65,
+      yFraction: 0.65,
+      hue: p.random(190, 210),
+      saturation: 28,
+      brightness: 75,
+      alpha: 40,
     },
     // lower wave
     {
-      amplitude: p.random(8, 14), frequency: p.random(0.012, 0.02),
-      speed: p.random(0.008, 0.015), phase: p.random(p.TWO_PI),
-      yBase: h * 0.8, yFraction: 0.8,
-      hue: p.random(185, 205), saturation: 35, brightness: 70, alpha: 50,
+      amplitude: p.random(8, 14),
+      frequency: p.random(0.012, 0.02),
+      speed: p.random(0.008, 0.015),
+      phase: p.random(p.TWO_PI),
+      yBase: h * 0.8,
+      yFraction: 0.8,
+      hue: p.random(185, 205),
+      saturation: 35,
+      brightness: 70,
+      alpha: 50,
     },
     // bottom wave — surface
     {
-      amplitude: p.random(5, 10), frequency: p.random(0.018, 0.028),
-      speed: p.random(0.012, 0.022), phase: p.random(p.TWO_PI),
-      yBase: h * 0.92, yFraction: 0.92,
-      hue: p.random(180, 200), saturation: 25, brightness: 85, alpha: 35,
+      amplitude: p.random(5, 10),
+      frequency: p.random(0.018, 0.028),
+      speed: p.random(0.012, 0.022),
+      phase: p.random(p.TWO_PI),
+      yBase: h * 0.92,
+      yFraction: 0.92,
+      hue: p.random(180, 200),
+      saturation: 25,
+      brightness: 85,
+      alpha: 35,
     },
   ];
 }
@@ -113,10 +143,11 @@ function drawWave(p: p5, layer: WaveLayer, w: number, h: number) {
   p.beginShape();
   const t = p.frameCount * layer.speed + layer.phase;
   for (let x = 0; x <= w; x += 4) {
-    const y = layer.yBase
-      + p.sin(x * layer.frequency + t) * layer.amplitude
-      + p.sin(x * layer.frequency * 1.7 + t * 1.3) * layer.amplitude * 0.4
-      + p.sin(x * layer.frequency * 0.5 + t * 0.7) * layer.amplitude * 0.25;
+    const y =
+      layer.yBase +
+      p.sin(x * layer.frequency + t) * layer.amplitude +
+      p.sin(x * layer.frequency * 1.7 + t * 1.3) * layer.amplitude * 0.4 +
+      p.sin(x * layer.frequency * 0.5 + t * 0.7) * layer.amplitude * 0.25;
     p.vertex(x, y);
   }
   p.vertex(w, h);
@@ -328,9 +359,13 @@ export function createWaterSketch(seed: string) {
         drawBubble(p, b);
         if (b.y < -10) {
           const nb = createBubble(p, p.width, p.height);
-          b.x = nb.x; b.y = nb.y; b.size = nb.size;
-          b.speed = nb.speed; b.wobblePhase = nb.wobblePhase;
-          b.wobbleAmp = nb.wobbleAmp; b.opacity = nb.opacity;
+          b.x = nb.x;
+          b.y = nb.y;
+          b.size = nb.size;
+          b.speed = nb.speed;
+          b.wobblePhase = nb.wobblePhase;
+          b.wobbleAmp = nb.wobbleAmp;
+          b.opacity = nb.opacity;
         }
       }
     };

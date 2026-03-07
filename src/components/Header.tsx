@@ -13,14 +13,21 @@ export default function Header({ themeToggle }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link to="/" className={styles.brand}>Some Notes</Link>
+        <Link to="/" className={styles.brand}>
+          Some Notes
+        </Link>
 
         <nav className={styles.nav}>
           <div className={styles.navRight}>
             <Link to="/folders" className={styles.iconLink} aria-label="Темы" title="Темы">
               <FolderIcon />
             </Link>
-            <Link to="/all" className={styles.iconLink} aria-label="Все заметки" title="Все заметки">
+            <Link
+              to="/all"
+              className={styles.iconLink}
+              aria-label="Все заметки"
+              title="Все заметки"
+            >
               <ListIcon />
             </Link>
             {themeToggle}
@@ -38,11 +45,21 @@ export default function Header({ themeToggle }: HeaderProps) {
 
           {menuOpen && (
             <div id="mobile-menu" className={styles.mobileMenu} role="menu">
-              <Link to="/folders" className={styles.mobileMenuItem} role="menuitem" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/folders"
+                className={styles.mobileMenuItem}
+                role="menuitem"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FolderIcon />
                 <span>Темы</span>
               </Link>
-              <Link to="/all" className={styles.mobileMenuItem} role="menuitem" onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/all"
+                className={styles.mobileMenuItem}
+                role="menuitem"
+                onClick={() => setMenuOpen(false)}
+              >
                 <ListIcon />
                 <span>Все заметки</span>
               </Link>

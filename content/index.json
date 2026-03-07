@@ -6,7 +6,9 @@
       "accent": "#4a7c59"
     },
     "guides": {
-      "title": "Гайды"
+      "title": "Гайды",
+      "theme": "water",
+      "accent": "#3a8fbf"
     },
     "cookbook": {
       "title": "Рецепты"

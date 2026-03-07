@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import p5 from 'p5';
 import { getSketch } from '../sketches';
+import styles from './ThemeBackground.module.css';
 
 interface ThemeBackgroundProps {
   theme: string;
@@ -25,5 +26,5 @@ export default function ThemeBackground({ theme, seed = '' }: ThemeBackgroundPro
     };
   }, [theme, seed]);
 
-  return <div ref={containerRef} className="ThemeBackground" />;
+  return <div ref={containerRef} className={styles.themeBackground} />;
 }

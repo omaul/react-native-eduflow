@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { useNotes } from '../hooks/useNotes';
 import { getTopLevelFolder } from '../utils/folders';
 import ThemeBackground from '../components/ThemeBackground';
+import s from '../styles/shared.module.css';
 
 type Params = {
   slug?: string;
@@ -29,17 +30,16 @@ export default function NoteViewer() {
   const theme = folderMeta?.theme;
   const accent = folderMeta?.accent;
 
-  // Back link logic
   const from = searchParams.get('from');
   const fromFolder = searchParams.get('folder');
   let backTo = '/';
-  let backLabel = '← На главную';
+  let backLabel = '\u2190 На главную';
   if (from === 'all') {
     backTo = '/all';
-    backLabel = '← Ко всем заметкам';
+    backLabel = '\u2190 Ко всем заметкам';
   } else if (from === 'folder' && fromFolder) {
     backTo = `/folder/${encodeURIComponent(fromFolder)}`;
-    backLabel = `← ${folderMeta?.title || fromFolder}`;
+    backLabel = `\u2190 ${folderMeta?.title || fromFolder}`;
   }
 
   React.useEffect(() => {
@@ -100,16 +100,16 @@ export default function NoteViewer() {
   };
 
   return (
-    <div className="Container ThemedPage" style={accent ? { '--theme-accent': accent } as React.CSSProperties : undefined}>
+    <div className={`${s.container} ${s.themedPage}`} style={accent ? { '--theme-accent': accent } as React.CSSProperties : undefined}>
       {theme && <ThemeBackground theme={theme} seed={effectiveSlug} />}
-      <div className="ThemedPage__content">
-        <div className="Back">
+      <div className={s.themedPageContent}>
+        <div className={s.back}>
           <Link to={backTo}>{backLabel}</Link>
         </div>
         {error && <p>Ошибка: {error}</p>}
         {!error && !md && <p>Загрузка…</p>}
         {md && (
-          <article className="Markdown">
+          <article className={s.markdown}>
             <ReactMarkdown remarkPlugins={[remarkGfm]} urlTransform={transformUri}>
               {md}
             </ReactMarkdown>

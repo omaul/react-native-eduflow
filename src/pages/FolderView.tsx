@@ -1,15 +1,17 @@
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useNotes } from '../hooks/useNotes';
 import { ROOT_FOLDER, getTopLevelFolder } from '../utils/folders';
 import NoteMetaInfo from '../components/NoteMetaInfo';
 import ThemeBackground from '../components/ThemeBackground';
+import s from '../styles/shared.module.css';
 
 export default function FolderView() {
   const { folder } = useParams();
   const { notes, folders, error } = useNotes();
 
-  if (error) return <div className="Container"><p>Ошибка: {error}</p></div>;
-  if (!notes) return <div className="Container"><p>Загрузка…</p></div>;
+  if (error) return <div className={s.container}><p>Ошибка: {error}</p></div>;
+  if (!notes) return <div className={s.container}><p>Загрузка…</p></div>;
 
   const folderMeta = folder ? folders[folder] : undefined;
   const theme = folderMeta?.theme;
@@ -22,17 +24,17 @@ export default function FolderView() {
   const title = folderMeta?.title || folder || 'Без папки';
 
   return (
-    <div className="Container ThemedPage" style={accent ? { '--theme-accent': accent } as React.CSSProperties : undefined}>
+    <div className={`${s.container} ${s.themedPage}`} style={accent ? { '--theme-accent': accent } as React.CSSProperties : undefined}>
       {theme && <ThemeBackground theme={theme} seed={folder || 'root'} />}
-      <div className="ThemedPage__content">
-        <div className="Back"><Link to="/folders">← Ко всем папкам</Link></div>
-        <h1 className="Title">{title}</h1>
-        <ul className="NotesList">
+      <div className={s.themedPageContent}>
+        <div className={s.back}><Link to="/folders">← Ко всем папкам</Link></div>
+        <h1 className={s.title}>{title}</h1>
+        <ul className={s.notesList}>
           {list.map((note) => (
-            <li key={note.slug} className="NotesList__item">
-              <Link to={`/note/${note.slug}?from=folder&folder=${encodeURIComponent(folder || '')}`} className="NoteLink">
-                <div className="NoteTitle">{note.title}</div>
-                {note.description && <div className="NoteDescription">{note.description}</div>}
+            <li key={note.slug}>
+              <Link to={`/note/${note.slug}?from=folder&folder=${encodeURIComponent(folder || '')}`} className={s.noteLink}>
+                <div className={s.noteTitle}>{note.title}</div>
+                {note.description && <div className={s.noteDescription}>{note.description}</div>}
                 <NoteMetaInfo date={note.date} tags={note.tags} />
               </Link>
             </li>

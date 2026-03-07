@@ -1,21 +1,21 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import s from '../styles/shared.module.css';
 
 export default function Home() {
   return (
-    <div className="Container">
-      <h1 className="Title">Навигация</h1>
-      <ul className="NotesList">
-        <li className="NotesList__item">
-          <Link to="/folders" className="NoteLink">
-            <div className="NoteTitle">Темы</div>
-            <div className="NoteDescription">Просмотр заметок по папкам</div>
+    <div className={s.container}>
+      <h1 className={s.title}>Навигация</h1>
+      <ul className={s.notesList}>
+        <li>
+          <Link to="/folders" className={s.noteLink}>
+            <div className={s.noteTitle}>Темы</div>
+            <div className={s.noteDescription}>Просмотр заметок по папкам</div>
           </Link>
         </li>
-        <li className="NotesList__item">
-          <Link to="/all" className="NoteLink">
-            <div className="NoteTitle">Все заметки</div>
-            <div className="NoteDescription">Полный список заметок</div>
+        <li>
+          <Link to="/all" className={s.noteLink}>
+            <div className={s.noteTitle}>Все заметки</div>
+            <div className={s.noteDescription}>Полный список заметок</div>
           </Link>
         </li>
       </ul>

@@ -12,6 +12,7 @@
 
 Перед работой с UI/стилями — сверься с **[.claude/design-system.md](.claude/design-system.md)**
 Перед работой с контентом/текстами — сверься с **[.claude/content-guide.md](.claude/content-guide.md)**
+Перед созданием/редактированием иконок — сверься с **[.claude/icon-guidelines.md](.claude/icon-guidelines.md)**
 
 Эти гайды — рекомендации, не жёсткие правила. Если возникает противоречие или сомнение — спроси у пользователя.
 

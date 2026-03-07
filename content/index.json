@@ -4,45 +4,9 @@
       "title": "Растения",
       "theme": "plants",
       "accent": "#4a7c59"
-    },
-    "guides": {
-      "title": "Гайды",
-      "theme": "water",
-      "accent": "#3a8fbf"
-    },
-    "cookbook": {
-      "title": "Рецепты"
     }
   },
   "notes": [
-    {
-      "slug": "welcome",
-      "title": "Добро пожаловать",
-      "description": "Короткое приветствие и объяснение как всё работает",
-      "tags": ["intro"],
-      "date": "2025-10-01"
-    },
-    {
-      "slug": "guides/react/basics",
-      "title": "React: основы",
-      "description": "Компоненты, состояние, эффекты",
-      "tags": ["react"],
-      "date": "2025-10-01"
-    },
-    {
-      "slug": "guides/react/advanced",
-      "title": "React: продвинуто",
-      "description": "Роутинг, markdown, деплой",
-      "tags": ["react"],
-      "date": "2025-10-01"
-    },
-    {
-      "slug": "cookbook/markdown-images",
-      "title": "Markdown: картинки и ссылки",
-      "description": "Примеры относительных путей в папке заметки",
-      "tags": ["markdown"],
-      "date": "2025-10-01"
-    },
     {
       "slug": "plants/medium/definitions",
       "title": "Термины: грунт и субстрат",

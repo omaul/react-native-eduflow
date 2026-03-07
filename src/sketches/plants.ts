@@ -97,7 +97,7 @@ function initBranches(p: p5, w: number, h: number): Branch[] {
   for (let i = 0; i < count; i++) {
     const left = p.random() > 0.5;
     const x = left ? 0 : w;
-    const y = h * p.random(0.4, 1.0);
+    const y = h * p.random(0.3, 0.75);
     const angle = left ? p.random(-0.3, -1.3) : p.random(-1.8, -2.8);
     branches.push(createBranch(p, x, y, angle, 0));
   }
@@ -113,38 +113,58 @@ function initBranches(p: p5, w: number, h: number): Branch[] {
 
 // ===== Element 2: Vine tendrils =====
 
+interface VineLeaf {
+  x: number;
+  y: number;
+  size: number;
+  angle: number;
+  hue: number;
+  style: 'oval' | 'pointed' | 'round';
+}
+
 interface Vine {
   points: { x: number; y: number }[];
   side: 'left' | 'right';
   growIndex: number;
   growTimer: number;
   growInterval: number;
-  leaves: { x: number; y: number; size: number; angle: number; hue: number }[];
+  thickness: number;
+  stemHue: number;
+  curviness: number;
+  leaves: VineLeaf[];
 }
 
 function initVines(p: p5, w: number, h: number): Vine[] {
   const vines: Vine[] = [];
-  const count = p.floor(p.random(3, 6));
+  const count = p.floor(p.random(5, 9));
   for (let i = 0; i < count; i++) {
     const side: 'left' | 'right' = p.random() > 0.5 ? 'left' : 'right';
-    const x = side === 'left' ? 0 : w;
+    const x = side === 'left' ? p.random(0, w * 0.04) : p.random(w * 0.96, w);
     const pts: { x: number; y: number }[] = [];
     let cx = x,
       cy = h + p.random(0, 30);
-    const segs = p.floor(p.random(14, 28));
+    const curviness = p.random(0.4, 1.0);
+    const segs = p.floor(p.random(16, 32));
+    const wanderDir = p.random() > 0.5 ? 1 : -1;
     for (let j = 0; j < segs; j++) {
       pts.push({ x: cx, y: cy });
-      cx += side === 'left' ? p.random(-3, 18) : p.random(-18, 3);
-      if (side === 'left') cx = p.min(cx, w * 0.15);
-      else cx = p.max(cx, w * 0.85);
-      cy -= p.random(15, 35);
+      // Sinuous horizontal movement
+      const wave = p.sin(j * curviness * 0.5) * 12 * curviness;
+      const drift = side === 'left' ? p.random(-2, 14) : p.random(-14, 2);
+      cx += drift + wave * wanderDir;
+      if (side === 'left') cx = p.min(cx, w * 0.18);
+      else cx = p.max(cx, w * 0.82);
+      cy -= p.random(12, 30);
     }
     vines.push({
       points: pts,
       side,
       growIndex: 0,
       growTimer: 0,
-      growInterval: p.random(2, 6),
+      growInterval: p.random(8, 18),
+      thickness: p.random(1.2, 3),
+      stemHue: p.random(100, 135),
+      curviness,
       leaves: [],
     });
   }
@@ -157,14 +177,16 @@ function updateVine(p: p5, v: Vine) {
   if (v.growTimer >= v.growInterval) {
     v.growTimer = 0;
     v.growIndex++;
-    if (v.growIndex > 2 && p.random() > 0.4) {
+    if (v.growIndex > 2 && p.random() > 0.3) {
       const pt = v.points[v.growIndex - 1];
+      const styles: VineLeaf['style'][] = ['oval', 'pointed', 'round'];
       v.leaves.push({
         x: pt.x,
         y: pt.y,
-        size: p.random(5, 12),
-        angle: v.side === 'left' ? p.random(0.2, 0.8) : p.random(-0.8, -0.2),
-        hue: p.random(85, 145),
+        size: p.random(5, 14),
+        angle: v.side === 'left' ? p.random(0.2, 1.0) : p.random(-1.0, -0.2),
+        hue: p.random(80, 150),
+        style: styles[p.floor(p.random(styles.length))],
       });
     }
   }
@@ -173,22 +195,34 @@ function updateVine(p: p5, v: Vine) {
 function drawVine(p: p5, v: Vine) {
   if (v.growIndex < 2) return;
   p.noFill();
-  p.stroke(120, 55, 40, 160);
-  p.strokeWeight(2);
+  p.stroke(v.stemHue, 50, 38, 160);
+  p.strokeWeight(v.thickness);
   p.beginShape();
   for (let i = 0; i < v.growIndex && i < v.points.length; i++)
-    (p as any).curveVertex(v.points[i].x, v.points[i].y);
+    p.splineVertex(v.points[i].x, v.points[i].y);
   p.endShape();
   p.noStroke();
   for (const lf of v.leaves) {
     p.push();
     p.translate(lf.x, lf.y);
     p.rotate(lf.angle);
+    p.noStroke();
     p.fill(lf.hue, 55, 60, 150);
-    p.ellipse(0, 0, lf.size, lf.size * 1.7);
+    if (lf.style === 'oval') {
+      p.ellipse(0, 0, lf.size, lf.size * 1.7);
+    } else if (lf.style === 'pointed') {
+      p.beginShape();
+      p.vertex(0, -lf.size * 0.9);
+      p.vertex(lf.size * 0.4, 0);
+      p.vertex(0, lf.size * 0.9);
+      p.vertex(-lf.size * 0.4, 0);
+      p.endShape(p.CLOSE);
+    } else {
+      p.circle(0, 0, lf.size * 1.1);
+    }
     p.stroke(lf.hue, 40, 35, 100);
     p.strokeWeight(0.5);
-    p.line(0, -lf.size * 0.7, 0, lf.size * 0.7);
+    p.line(0, -lf.size * 0.6, 0, lf.size * 0.6);
     p.pop();
   }
 }
@@ -489,19 +523,11 @@ type ElementName = (typeof _ELEMENT_NAMES)[number];
 
 // Predefined combos for nice variety
 const COMBOS: ElementName[][] = [
-  ['branches', 'seeds'],
-  ['vines', 'petals'],
-  ['ferns', 'seeds'],
+  ['vines', 'ferns', 'seeds'],
   ['branches', 'petals', 'flowers'],
-  ['vines', 'ferns'],
-  ['flowers', 'seeds', 'petals'],
-  ['branches', 'vines', 'seeds'],
-  ['ferns', 'flowers', 'petals'],
-  ['vines', 'seeds', 'flowers'],
-  ['branches', 'ferns'],
 ];
 
-export function createPlantsSketch(seed: string) {
+export function createPlantsSketch(seed: string, container: HTMLElement) {
   return function plantsSketch(p: p5) {
     const h = hashSeed(seed);
     const combo = COMBOS[h % COMBOS.length];
@@ -517,9 +543,8 @@ export function createPlantsSketch(seed: string) {
     };
 
     p.setup = () => {
-      const parent = (p as any).canvas?.parentElement;
-      const w = parent ? parent.offsetWidth : 800;
-      const ht = parent ? parent.offsetHeight : 600;
+      const w = container.offsetWidth || 800;
+      const ht = container.offsetHeight || 600;
       p.createCanvas(w, ht);
       p.colorMode(p.HSB, 360, 100, 100, 255);
 
@@ -561,8 +586,7 @@ export function createPlantsSketch(seed: string) {
     };
 
     p.windowResized = () => {
-      const parent = (p as any).canvas?.parentElement;
-      if (parent) p.resizeCanvas(parent.offsetWidth, parent.offsetHeight);
+      p.resizeCanvas(container.offsetWidth, container.offsetHeight);
     };
   };
 }

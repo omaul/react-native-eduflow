@@ -4,14 +4,14 @@ import { createWaterSketch } from './water';
 
 type SketchFn = (p: p5) => void;
 
-type SketchFactory = (seed: string) => SketchFn;
+type SketchFactory = (seed: string, container: HTMLElement) => SketchFn;
 
 const themes: Record<string, SketchFactory> = {
   plants: createPlantsSketch,
   water: createWaterSketch,
 };
 
-export function getSketch(theme: string, seed: string): SketchFn | null {
+export function getSketch(theme: string, seed: string, container: HTMLElement): SketchFn | null {
   const factory = themes[theme];
-  return factory ? factory(seed) : null;
+  return factory ? factory(seed, container) : null;
 }

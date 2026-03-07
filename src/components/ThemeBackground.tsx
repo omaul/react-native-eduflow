@@ -13,8 +13,9 @@ export default function ThemeBackground({ theme, seed = '' }: ThemeBackgroundPro
   const instanceRef = useRef<p5 | null>(null);
 
   useEffect(() => {
-    const sketchFn = getSketch(theme, seed);
-    if (!sketchFn || !containerRef.current || typeof p5 === 'undefined') return;
+    if (!containerRef.current || typeof p5 === 'undefined') return;
+    const sketchFn = getSketch(theme, seed, containerRef.current);
+    if (!sketchFn) return;
 
     instanceRef.current = new p5(sketchFn, containerRef.current);
 

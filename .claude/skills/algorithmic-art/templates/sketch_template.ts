@@ -12,6 +12,8 @@
  *   - Canvas must be transparent (use p.clear(), not p.background())
  *   - Keep visuals subtle — this is a background behind readable content
  *   - Focus elements on edges, leave center clear
+ *   - p5.js v2: use splineVertex() instead of curveVertex()
+ *   - Container element is passed via closure for sizing
  */
 
 import p5 from 'p5';
@@ -32,7 +34,7 @@ interface Particle {
   // add properties as needed
 }
 
-export function createThemeSketch(seed: string) {
+export function createThemeSketch(seed: string, container: HTMLElement) {
   return function themeSketch(p: p5) {
     const h = hashSeed(seed);
 
@@ -42,9 +44,8 @@ export function createThemeSketch(seed: string) {
     };
 
     p.setup = () => {
-      const parent = (p as any).canvas?.parentElement;
-      const w = parent ? parent.offsetWidth : 800;
-      const ht = parent ? parent.offsetHeight : 600;
+      const w = container.offsetWidth || 800;
+      const ht = container.offsetHeight || 600;
       p.createCanvas(w, ht);
       p.colorMode(p.HSB, 360, 100, 100, 255);
 
@@ -62,8 +63,7 @@ export function createThemeSketch(seed: string) {
     };
 
     p.windowResized = () => {
-      const parent = (p as any).canvas?.parentElement;
-      if (parent) p.resizeCanvas(parent.offsetWidth, parent.offsetHeight);
+      p.resizeCanvas(container.offsetWidth, container.offsetHeight);
     };
   };
 }

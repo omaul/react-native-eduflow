@@ -246,7 +246,7 @@ function drawCurrentLine(p: p5, cl: CurrentLine) {
   for (const pt of cl.points) {
     const offsetX = p.sin(pt.y * 0.008 + t) * 12;
     const offsetY = p.sin(pt.x * 0.01 + t * 1.3) * 4;
-    (p as any).curveVertex(pt.x + offsetX, pt.y + offsetY);
+    p.splineVertex(pt.x + offsetX, pt.y + offsetY);
   }
   p.endShape();
 }
@@ -295,7 +295,7 @@ function drawSpec(p: p5, s: Spec) {
 
 // ===== Main sketch =====
 
-export function createWaterSketch(seed: string) {
+export function createWaterSketch(seed: string, container: HTMLElement) {
   return function waterSketch(p: p5) {
     const h = hashSeed(seed);
 
@@ -308,9 +308,8 @@ export function createWaterSketch(seed: string) {
     };
 
     p.setup = () => {
-      const parent = (p as any).canvas?.parentElement;
-      const w = parent ? parent.offsetWidth : 800;
-      const ht = parent ? parent.offsetHeight : 600;
+      const w = container.offsetWidth || 800;
+      const ht = container.offsetHeight || 600;
       p.createCanvas(w, ht);
       p.colorMode(p.HSB, 360, 100, 100, 255);
       p.randomSeed(h);
@@ -371,13 +370,10 @@ export function createWaterSketch(seed: string) {
     };
 
     p.windowResized = () => {
-      const parent = (p as any).canvas?.parentElement;
-      if (parent) {
-        p.resizeCanvas(parent.offsetWidth, parent.offsetHeight);
-        const ht = parent.offsetHeight;
-        for (const w of state.waves) {
-          w.yBase = ht * w.yFraction;
-        }
+      p.resizeCanvas(container.offsetWidth, container.offsetHeight);
+      const ht = container.offsetHeight;
+      for (const w of state.waves) {
+        w.yBase = ht * w.yFraction;
       }
     };
   };

@@ -14,7 +14,7 @@ export default function Header({ themeToggle }: HeaderProps) {
     <header className={styles.header}>
       <div className={styles.inner}>
         <Link to="/" className={styles.brand}>
-          Some Notes
+          Что-то где-то растёт
         </Link>
 
         <nav className={styles.nav}>

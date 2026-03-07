@@ -1,4 +1,4 @@
-import p5 from '../types/p5-global';
+import p5 from 'p5';
 import { createPlantsSketch } from './plants';
 
 type SketchFn = (p: p5) => void;

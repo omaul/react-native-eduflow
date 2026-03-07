@@ -1,4 +1,4 @@
-import p5 from '../types/p5-global';
+import p5 from 'p5';
 
 // Simple hash to get deterministic number from string
 function hashSeed(s: string): number {
@@ -131,7 +131,7 @@ function drawVine(p: p5, v: Vine) {
   if (v.growIndex < 2) return;
   p.noFill(); p.stroke(120, 55, 40, 160); p.strokeWeight(2);
   p.beginShape();
-  for (let i = 0; i < v.growIndex && i < v.points.length; i++) p.curveVertex(v.points[i].x, v.points[i].y);
+  for (let i = 0; i < v.growIndex && i < v.points.length; i++) (p as any).curveVertex(v.points[i].x, v.points[i].y);
   p.endShape();
   p.noStroke();
   for (const lf of v.leaves) {

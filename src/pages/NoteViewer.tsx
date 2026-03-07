@@ -22,7 +22,7 @@ export default function NoteViewer() {
   const { folders } = useNotes();
   const [md, setMd] = React.useState<string | null>(null);
   const [error, setError] = React.useState<string | null>(null);
-  const [basePath, setBasePath] = React.useState<string>(`${process.env.PUBLIC_URL}/content/`);
+  const [basePath, setBasePath] = React.useState<string>(`${import.meta.env.BASE_URL}content/`);
 
   const topFolder = getTopLevelFolder(effectiveSlug);
   const folderMeta = folders[topFolder];
@@ -46,7 +46,7 @@ export default function NoteViewer() {
     let cancelled = false;
     async function load() {
       if (!effectiveSlug) return;
-      const contentRoot = `${process.env.PUBLIC_URL}/content/`;
+      const contentRoot = `${import.meta.env.BASE_URL}content/`;
       const tryIndex = `${contentRoot}${effectiveSlug}/index.md`;
       const tryFlat = `${contentRoot}${effectiveSlug}.md`;
 

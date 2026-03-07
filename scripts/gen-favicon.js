@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
-const toIco = require('to-ico');
+const pngToIco = require('png-to-ico');
 
 async function main() {
   const svgPath = path.resolve(__dirname, '..', 'public', 'favicon.svg');
@@ -15,7 +15,7 @@ async function main() {
   const pngBuffers = await Promise.all(
     sizes.map((size) => sharp(svgPath).resize(size, size).png().toBuffer())
   );
-  const ico = await toIco(pngBuffers);
+  const ico = await pngToIco(pngBuffers);
   fs.writeFileSync(outIco, ico);
   console.log('Generated', outIco);
 }

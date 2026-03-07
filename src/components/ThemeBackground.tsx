@@ -1,12 +1,11 @@
 import { useRef, useEffect } from 'react';
+import p5 from 'p5';
 import { getSketch } from '../sketches';
 
 interface ThemeBackgroundProps {
   theme: string;
   seed?: string;
 }
-
-declare const p5: any;
 
 export default function ThemeBackground({ theme, seed = '' }: ThemeBackgroundProps) {
   const containerRef = useRef<HTMLDivElement>(null);

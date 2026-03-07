@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ContentIndex, NoteMeta, FolderMeta } from '../types';
 
-const INDEX_URL = process.env.PUBLIC_URL + '/content/index.json';
+const INDEX_URL = import.meta.env.BASE_URL + 'content/index.json';
 
 export function useNotes() {
   const [notes, setNotes] = useState<NoteMeta[] | null>(null);

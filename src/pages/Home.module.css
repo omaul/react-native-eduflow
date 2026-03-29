@@ -1,0 +1,73 @@
+/* Home page — section hub */
+
+.sectionsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.sectionCard {
+  display: block;
+  padding: var(--space-6) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-left-width: 3px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-text);
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) var(--easing-default),
+    background var(--duration-fast) var(--easing-default);
+}
+
+.sectionCard:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-subtle);
+  text-decoration: none;
+}
+
+.sectionTitle {
+  display: block;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+}
+
+.sectionDescription {
+  display: block;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.sectionMeta {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.allNotesLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  transition:
+    color var(--duration-fast) var(--easing-default),
+    background var(--duration-fast) var(--easing-default),
+    border-color var(--duration-fast) var(--easing-default);
+}
+
+.allNotesLink:hover {
+  color: var(--color-text);
+  background: var(--color-bg-subtle);
+  border-color: var(--color-border-hover);
+  text-decoration: none;
+}

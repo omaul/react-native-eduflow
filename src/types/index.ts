@@ -6,10 +6,20 @@ export type NoteMeta = {
   date?: string;
 };
 
-export type FolderMeta = {
+export type SubtopicMeta = {
   title: string;
   theme?: string;
   accent?: string;
+  order?: number;
+};
+
+export type FolderMeta = {
+  title: string;
+  description?: string;
+  theme?: string;
+  accent?: string;
+  order?: number;
+  subtopics?: Record<string, SubtopicMeta>;
 };
 
 export type ContentIndex = {

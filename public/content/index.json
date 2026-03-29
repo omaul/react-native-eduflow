@@ -1,39 +1,79 @@
 {
   "folders": {
-    "plants": {
-      "title": "Растения",
+    "care": {
+      "title": "Уход за растениями",
+      "description": "Субстраты, полив, пересадка и другие основы",
       "theme": "plants",
-      "accent": "#4a7c59"
+      "accent": "#4a7c59",
+      "order": 1,
+      "subtopics": {
+        "medium": { "title": "Субстрат и грунт", "order": 1 },
+        "water": { "title": "Полив", "theme": "water", "accent": "#3a8fbf", "order": 2 }
+      }
+    },
+    "species": {
+      "title": "Виды растений",
+      "description": "Каталог растений с особенностями ухода",
+      "accent": "#8c6d52",
+      "order": 2
     }
   },
   "notes": [
     {
-      "slug": "plants/medium/definitions",
+      "slug": "care/medium/definitions",
       "title": "Термины: грунт и субстрат",
       "description": "Что это и зачем различать",
-      "tags": ["plants", "base"],
+      "tags": ["care", "base"],
       "date": "2025-10-01"
     },
     {
-      "slug": "plants/medium/soil-vs-substrate",
+      "slug": "care/medium/soil-vs-substrate",
       "title": "Грунт vs субстрат дома",
       "description": "Почему лесная земля и дешёвые смеси опасны",
-      "tags": ["plants", "safety"],
+      "tags": ["care", "safety"],
       "date": "2025-10-01"
     },
     {
-      "slug": "plants/medium/why-loose",
+      "slug": "care/medium/why-loose",
       "title": "Рыхлый субстрат и аэрация",
       "description": "Влагоудержание + дренаж",
-      "tags": ["plants", "physics"],
+      "tags": ["care", "physics"],
       "date": "2025-10-01"
     },
     {
-      "slug": "plants/medium/transplant-stress",
+      "slug": "care/medium/transplant-stress",
       "title": "Стресс при смене субстрата",
       "description": "Почему важно подбирать среду",
-      "tags": ["plants", "practice"],
+      "tags": ["care", "practice"],
       "date": "2025-10-01"
+    },
+    {
+      "slug": "care/water/basics",
+      "title": "Когда и как поливать",
+      "description": "Забудь про расписание — поливай по состоянию субстрата",
+      "tags": ["care", "water", "base"],
+      "date": "2025-10-15"
+    },
+    {
+      "slug": "care/water/overwatering",
+      "title": "Перелив: убийца №1",
+      "description": "Почему перелив опаснее засухи и как его распознать",
+      "tags": ["care", "water", "safety"],
+      "date": "2025-10-15"
+    },
+    {
+      "slug": "care/water/water-quality",
+      "title": "Какой водой поливать",
+      "description": "Жёсткость, хлор, температура и чем это грозит",
+      "tags": ["care", "water"],
+      "date": "2025-10-15"
+    },
+    {
+      "slug": "care/water/watering-methods",
+      "title": "Способы полива",
+      "description": "Верхний, нижний, погружение и фитильный — когда какой",
+      "tags": ["care", "water", "practice"],
+      "date": "2025-10-15"
     }
   ]
 }

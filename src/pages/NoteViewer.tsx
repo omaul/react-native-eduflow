@@ -28,8 +28,14 @@ export default function NoteViewer() {
 
   const topFolder = getTopLevelFolder(effectiveSlug);
   const folderMeta = folders[topFolder];
-  const theme = folderMeta?.theme;
-  const accent = folderMeta?.accent;
+
+  // Extract subtopic (second segment of slug, e.g. "care/water/basics" → "water")
+  const slugParts = effectiveSlug.split('/');
+  const subtopicKey = slugParts.length >= 3 ? slugParts[1] : undefined;
+  const subtopicMeta = subtopicKey ? folderMeta?.subtopics?.[subtopicKey] : undefined;
+
+  const theme = subtopicMeta?.theme ?? folderMeta?.theme;
+  const accent = subtopicMeta?.accent ?? folderMeta?.accent;
 
   const from = searchParams.get('from');
   const fromFolder = searchParams.get('folder');

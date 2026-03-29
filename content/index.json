@@ -8,7 +8,8 @@
       "order": 1,
       "subtopics": {
         "medium": { "title": "Субстрат и грунт", "order": 1 },
-        "water": { "title": "Полив", "theme": "water", "accent": "#3a8fbf", "order": 2 }
+        "water": { "title": "Полив", "theme": "water", "accent": "#3a8fbf", "order": 2 },
+        "light": { "title": "Свет", "order": 3 }
       }
     },
     "species": {
@@ -74,6 +75,20 @@
       "description": "Верхний, нижний, погружение и фитильный — когда какой",
       "tags": ["care", "water", "practice"],
       "date": "2025-10-15"
+    },
+    {
+      "slug": "care/light/basics",
+      "title": "Свет: почему это важнее, чем кажется",
+      "description": "Мало света = залив, даже если поливаешь правильно",
+      "tags": ["care", "light", "base"],
+      "date": "2025-10-20"
+    },
+    {
+      "slug": "care/light/supplemental-lighting",
+      "title": "Досветка: какая лампа нужна",
+      "description": "Белый LED, 10–14 часов, без фитоламп — и этого достаточно",
+      "tags": ["care", "light", "practice"],
+      "date": "2025-10-20"
     }
   ]
 }

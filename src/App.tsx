@@ -26,7 +26,7 @@ function ThemeToggleButton() {
 
 function App() {
   return (
-    <div>
+    <>
       <HashRouter>
         <Header themeToggle={<ThemeToggleButton />} />
         <main className={shared.main}>
@@ -40,7 +40,7 @@ function App() {
           </Routes>
         </main>
       </HashRouter>
-    </div>
+    </>
   );
 }
 

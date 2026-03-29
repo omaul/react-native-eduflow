@@ -4,6 +4,7 @@ import { useNotes } from '../hooks/useNotes';
 import { ROOT_FOLDER, getTopLevelFolder } from '../utils/folders';
 import NoteMetaInfo from '../components/NoteMetaInfo';
 import ThemeBackground from '../components/ThemeBackground';
+import { ArrowLeftIcon } from '../components/Icons';
 import s from '../styles/shared.module.css';
 
 export default function FolderView() {
@@ -52,7 +53,7 @@ export default function FolderView() {
       <div className={s.themedPageContent}>
         <div className={s.back}>
           <Link to="/folders">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5" /><path d="m12 19-7-7 7-7" /></svg>
+            <ArrowLeftIcon />
             Ко всем папкам
           </Link>
         </div>
@@ -64,8 +65,8 @@ export default function FolderView() {
                 to={`/note/${note.slug}?from=folder&folder=${encodeURIComponent(folder || '')}`}
                 className={s.noteLink}
               >
-                <div className={s.noteTitle}>{note.title}</div>
-                {note.description && <div className={s.noteDescription}>{note.description}</div>}
+                <span className={s.noteTitle}>{note.title}</span>
+                {note.description && <span className={s.noteDescription}>{note.description}</span>}
                 <NoteMetaInfo date={note.date} tags={note.tags} />
               </Link>
             </li>

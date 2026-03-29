@@ -79,6 +79,15 @@ export function SunIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function ArrowLeftIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconDefaults} {...props}>
+      <path d="M19 12H5" />
+      <path d="m12 19-7-7 7-7" />
+    </svg>
+  );
+}
+
 export function MoonIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg {...iconDefaults} {...props}>

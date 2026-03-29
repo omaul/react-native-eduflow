@@ -8,14 +8,14 @@ export default function Home() {
       <ul className={s.notesList}>
         <li>
           <Link to="/folders" className={s.noteLink}>
-            <div className={s.noteTitle}>Темы</div>
-            <div className={s.noteDescription}>Просмотр заметок по папкам</div>
+            <span className={s.noteTitle}>Темы</span>
+            <span className={s.noteDescription}>Просмотр заметок по папкам</span>
           </Link>
         </li>
         <li>
           <Link to="/all" className={s.noteLink}>
-            <div className={s.noteTitle}>Все заметки</div>
-            <div className={s.noteDescription}>Полный список заметок</div>
+            <span className={s.noteTitle}>Все заметки</span>
+            <span className={s.noteDescription}>Полный список заметок</span>
           </Link>
         </li>
       </ul>

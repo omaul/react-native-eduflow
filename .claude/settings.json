@@ -1,0 +1,27 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(npm run lint*)",
+            "Bash(npm run type-check)",
+            "Bash(npm run test*)",
+            "Bash(git status)",
+            "Bash(git diff)",
+            "Bash(git log)",
+            "Bash(git show*)",
+            "Bash(find*)",
+            "Bash(grep*)",
+            "Bash(ls*)"
+        ],
+        "ask": ["Bash(rm *)", "Bash(npm install*)"],
+        "deny": [
+            "Bash(rm -rf)",
+            "Bash(git commit*)",
+            "Bash(git push*)",
+            "Bash(git reset*)",
+            "Bash(sudo *)",
+            "Bash(curl*)",
+            "Read(.env*)",
+            "Read(**/.env*)"
+        ]
+    }
+}

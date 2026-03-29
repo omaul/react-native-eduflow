@@ -55,8 +55,8 @@ export default function Folders() {
                   meta?.accent ? { borderLeftColor: meta.accent, borderLeftWidth: 3 } : undefined
                 }
               >
-                <div className={s.noteTitle}>{title}</div>
-                <div className={s.noteMeta}>{folderToNotes.get(f)?.length || 0} заметок</div>
+                <span className={s.noteTitle}>{title}</span>
+                <span className={s.noteMeta}>{folderToNotes.get(f)?.length || 0} заметок</span>
               </Link>
             </li>
           );

@@ -92,15 +92,18 @@
 }
 
 .noteTitle {
+  display: block;
   font-weight: var(--weight-semibold);
 }
 
 .noteDescription {
+  display: block;
   color: var(--color-text-secondary);
   margin-top: var(--space-1);
 }
 
 .noteMeta {
+  display: block;
   margin-top: var(--space-1);
   color: var(--color-text-muted);
   font-size: var(--text-xs);

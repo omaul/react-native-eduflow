@@ -1,0 +1,2183 @@
+{
+  "items": [
+    {
+      "id": "monstera-deliciosa",
+      "name": "Монстера деликатесная",
+      "latin": "Monstera deliciosa",
+      "family": "Ароидные",
+      "aliases": [
+        "монстера"
+      ],
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Крупные мясистые корни и прорези в листьях. Одно из самых устойчивых к ошибкам ароидных.",
+      "light": "bright-indirect",
+      "lightNote": "Выносит полутень, но листья будут мельче и без прорезей. Прорези — признак того, что света достаточно.",
+      "water": "dry-top",
+      "waterNote": "Просушка верхних 3–4 см. Зимой заметно реже: короткий день — меньше транспирации.",
+      "humidity": "medium",
+      "temp": [
+        18,
+        27
+      ],
+      "roots": {
+        "size": "thick",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-chips",
+            "share": "30–40%",
+            "why": "Мясистым корням нужна крупная фракция, за которую можно ухватиться"
+          },
+          {
+            "component": "pine-bark",
+            "share": "20%",
+            "why": "Крупная кора добавляет воздуха и слегка подкисляет"
+          },
+          {
+            "component": "perlite",
+            "share": "20–30%",
+            "why": "Воздух без риска остудить корни"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Антисептик для крупного объёма"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "sand",
+            "why": "Забивает поры между крупными частицами и превращает смесь в болото"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Лишняя влага там, где корни и так склонны к гнили"
+          }
+        ],
+        "note": "Чем старше растение, тем крупнее фракцию можно давать. Взрослой монстере в мелкой крошке тесно."
+      },
+      "pot": "Прозрачный пластик в кашпо, +2 см при пересадке",
+      "toxicToPets": true,
+      "growth": "fast",
+      "propagation": [
+        "черенки",
+        "воздушные отводки"
+      ],
+      "quirk": "Воздушные корни — не мусор. Не обрезай их: направь в субстрат или дай опору, и растение вложит силы в новые листья.",
+      "visual": {
+        "form": "clump",
+        "leaf": "split",
+        "palette": "green"
+      },
+      "tags": [
+        "ароидное",
+        "крупное",
+        "для начинающих"
+      ],
+      "relatedNotes": [
+        "care/medium/fraction",
+        "care/medium/recipes",
+        "care/pots/size"
+      ],
+      "article": true
+    },
+    {
+      "id": "epipremnum",
+      "name": "Эпипремнум",
+      "latin": "Epipremnum aureum",
+      "family": "Ароидные",
+      "aliases": [
+        "сциндапсус золотистый",
+        "потос"
+      ],
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Лиана, устойчивая к ошибкам в уходе. Растёт при слабом свете, укореняется в воде.",
+      "light": "partial",
+      "lightNote": "Терпит глубину комнаты, но пестролистные формы в тени зеленеют — рисунок держится только при хорошем свете.",
+      "water": "dry-top",
+      "waterNote": "Сообщает о жажде вялыми листьями и восстанавливается за часы. Идеальное растение для тренировки чувства полива.",
+      "humidity": "low",
+      "temp": [
+        16,
+        28
+      ],
+      "roots": {
+        "size": "medium",
+        "fraction": "medium"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "40%",
+            "why": "Держит влагу, не превращаясь в кирпич"
+          },
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Воздух и защита от перелива"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Страховка от гнили при частом поливе"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "sand",
+            "why": "Не нужен: смесь и без него достаточно тяжёлая"
+          }
+        ],
+        "note": "Универсальная базовая смесь работает без правок. Это тот вид, на котором стоит учиться замешивать субстрат."
+      },
+      "pot": "Любой с дренажными отверстиями",
+      "toxicToPets": true,
+      "growth": "fast",
+      "propagation": [
+        "черенки в воде",
+        "черенки в субстрате"
+      ],
+      "quirk": "Если черенок укоренился в воде, корни будут толстые и водные. При переносе в грунт растению придётся отращивать другие — это и есть стресс смены субстрата.",
+      "visual": {
+        "form": "vine",
+        "leaf": "heart",
+        "palette": "green"
+      },
+      "tags": [
+        "лиана",
+        "ампельное",
+        "устойчивое"
+      ],
+      "relatedNotes": [
+        "care/medium/transplant-stress",
+        "care/water/basics",
+        "care/light/basics"
+      ],
+      "article": true
+    },
+    {
+      "id": "sansevieria",
+      "name": "Сансевиерия",
+      "latin": "Dracaena trifasciata",
+      "family": "Спаржевые",
+      "aliases": [
+        "щучий хвост",
+        "тёщин язык"
+      ],
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Символ растения для тёмного угла. На самом деле теневыносливая, а не тенелюбивая — у окна растёт заметно быстрее.",
+      "light": "partial",
+      "lightNote": "Выживает при 200–500 lux, но её точка насыщения гораздо выше. На ярком рассеянном свете даёт больше листьев и может зацвести.",
+      "water": "dry-through",
+      "waterNote": "Полная просушка. Зимой в прохладе можно не поливать месяц — это норма, а не жестокость.",
+      "humidity": "low",
+      "temp": [
+        15,
+        30
+      ],
+      "roots": {
+        "size": "medium",
+        "fraction": "medium"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          7
+        ],
+        "prefer": [
+          {
+            "component": "perlite",
+            "share": "35%",
+            "why": "Максимум воздуха: главный риск для неё — перелив"
+          },
+          {
+            "component": "coco-peat",
+            "share": "30%",
+            "why": "Немного влагоёмкости, без болота"
+          },
+          {
+            "component": "pumice",
+            "share": "20%",
+            "why": "Стабильная минеральная основа"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Антисептик: корневища легко гниют"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "vermiculite",
+            "why": "Удержит влагу там, где растению нужна полная просушка"
+          },
+          {
+            "component": "sand",
+            "why": "Мелкая фракция не просыхает, риск гнили корневища растёт"
+          },
+          {
+            "component": "biohumus",
+            "why": "Избыток органики при редком поливе закисает"
+          }
+        ],
+        "note": "Минеральный уклон. Если сомневаешься между влагоёмкостью и воздухом — выбирай воздух."
+      },
+      "pot": "Тесный, тяжёлый: растение высокое и опрокидывается",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "деление корневища",
+        "листовые черенки"
+      ],
+      "quirk": "Листовым черенком пестролистные формы не размножить: рисунок пропадёт, вырастет обычная зелёная. Только деление.",
+      "visual": {
+        "form": "upright",
+        "leaf": "strap",
+        "palette": "green"
+      },
+      "tags": [
+        "суккулент",
+        "устойчивое",
+        "для тёмных мест"
+      ],
+      "relatedNotes": [
+        "care/light/basics",
+        "care/water/overwatering",
+        "care/medium/recipes"
+      ],
+      "article": true
+    },
+    {
+      "id": "zamioculcas",
+      "name": "Замиокулькас",
+      "latin": "Zamioculcas zamiifolia",
+      "family": "Ароидные",
+      "aliases": [
+        "долларовое дерево"
+      ],
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Клубни-запасники делают его устойчивым к засухе и уязвимым к переливу.",
+      "light": "partial",
+      "lightNote": "Терпит полутень, предпочитает яркий рассеянный. В глубине комнаты просто стоит на месте.",
+      "water": "dry-through",
+      "waterNote": "Полная просушка всего объёма. В клубнях запас воды — растение переживёт забытый месяц легче, чем один лишний полив.",
+      "humidity": "low",
+      "temp": [
+        16,
+        28
+      ],
+      "roots": {
+        "size": "thick",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          7
+        ],
+        "prefer": [
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Воздух вокруг клубней — главная защита от гнили"
+          },
+          {
+            "component": "pumice",
+            "share": "25%",
+            "why": "Крупная минеральная фракция под толстые корни"
+          },
+          {
+            "component": "coco-chips",
+            "share": "25%",
+            "why": "Влага без плотной массы"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Клубни при подгнивании спасает антисептик"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "peat",
+            "why": "Чистый торф держит слишком много влаги у клубней"
+          },
+          {
+            "component": "vermiculite",
+            "why": "То же: клубням нужна просушка"
+          },
+          {
+            "component": "sand",
+            "why": "Утяжеляет и не просыхает"
+          }
+        ],
+        "note": "Половина смеси — минеральная. В мокром субстрате клубень может сгнить за несколько дней."
+      },
+      "pot": "Плотный по размеру клубней, обязательно с дренажем",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "деление клубней",
+        "листовые черенки"
+      ],
+      "quirk": "Новый побег выходит сразу целиком, как копьё, и разворачивается за пару недель. Между такими рывками растение может месяцами не меняться — это не болезнь.",
+      "visual": {
+        "form": "fern",
+        "leaf": "frond",
+        "palette": "dark"
+      },
+      "tags": [
+        "ароидное",
+        "устойчивое",
+        "суккулентное"
+      ],
+      "relatedNotes": [
+        "care/water/overwatering",
+        "care/medium/why-loose",
+        "care/pots/size"
+      ],
+      "article": true
+    },
+    {
+      "id": "chlorophytum",
+      "name": "Хлорофитум",
+      "latin": "Chlorophytum comosum",
+      "family": "Спаржевые",
+      "aliases": [
+        "зелёная лилия"
+      ],
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Толстые корни-запасники, детки на усах. Безопасен для кошек.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "waterNote": "Любит воду, но накапливает её в корнях. Кончики листьев сохнут от жёсткой воды и сухого воздуха, а не от недолива.",
+      "humidity": "medium",
+      "temp": [
+        15,
+        27
+      ],
+      "roots": {
+        "size": "thick",
+        "fraction": "medium"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          6.8
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "40%",
+            "why": "Влагоёмкость под активный рост"
+          },
+          {
+            "component": "perlite",
+            "share": "25%",
+            "why": "Воздух между толстыми корнями"
+          },
+          {
+            "component": "zeolite",
+            "share": "5–10%",
+            "why": "Кальций и магний, которых кокос забирает"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "sand",
+            "why": "Толстые корни и без того плотно заполняют горшок"
+          }
+        ],
+        "note": "Корни быстро заполняют объём и начинают выдавливать субстрат наружу — это сигнал к пересадке."
+      },
+      "pot": "Чуть просторнее корней, +2 см",
+      "toxicToPets": false,
+      "growth": "fast",
+      "propagation": [
+        "детки на усах",
+        "деление куста"
+      ],
+      "quirk": "Кошки едят его с удовольствием и без вреда. Если хочется, чтобы растение дожило до старости — вешай повыше.",
+      "visual": {
+        "form": "rosette",
+        "leaf": "strap",
+        "palette": "green"
+      },
+      "tags": [
+        "безопасное",
+        "ампельное",
+        "устойчивое"
+      ],
+      "relatedNotes": [
+        "care/water/water-quality",
+        "care/pots/size"
+      ]
+    },
+    {
+      "id": "spathiphyllum",
+      "name": "Спатифиллум",
+      "latin": "Spathiphyllum wallisii",
+      "family": "Ароидные",
+      "aliases": [
+        "женское счастье"
+      ],
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "При недостатке воды роняет все листья сразу и поднимает их через час после полива.",
+      "light": "partial",
+      "lightNote": "Цветёт при ярком рассеянном. В тени живёт, но белых «парусов» не даёт.",
+      "water": "keep-moist",
+      "waterNote": "Любит стабильно влажный субстрат, но не мокрый. Цикл «засушил до обморока — залил» изнашивает корни, хотя выглядит безобидно.",
+      "humidity": "high",
+      "temp": [
+        18,
+        26
+      ],
+      "roots": {
+        "size": "medium",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "45%",
+            "why": "Стабильная влажность без пересыхания"
+          },
+          {
+            "component": "perlite",
+            "share": "25%",
+            "why": "Воздух: влажный субстрат без аэрации быстро закисает"
+          },
+          {
+            "component": "sphagnum",
+            "share": "10%",
+            "why": "Сглаживает провалы влажности между поливами"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "coco-chips",
+            "why": "Слишком крупная фракция для его довольно тонких корней"
+          },
+          {
+            "component": "sand",
+            "why": "При постоянной влажности гарантирует болото"
+          }
+        ],
+        "note": "Здесь важен баланс: влагоёмкость выше средней, но воздух обязателен — постоянно влажная органика без аэрации закисает."
+      },
+      "pot": "Тесный: в большом объёме не цветёт",
+      "toxicToPets": true,
+      "growth": "medium",
+      "propagation": [
+        "деление куста"
+      ],
+      "quirk": "Регулярные пересушки до потери тургора изнашивают корневую систему: часть корней при этом подсыхает.",
+      "visual": {
+        "form": "clump",
+        "leaf": "arrow",
+        "palette": "green"
+      },
+      "tags": [
+        "ароидное",
+        "цветущее"
+      ],
+      "relatedNotes": [
+        "care/water/basics",
+        "care/pots/size"
+      ]
+    },
+    {
+      "id": "ficus-elastica",
+      "name": "Фикус эластика",
+      "latin": "Ficus elastica",
+      "family": "Тутовые",
+      "aliases": [
+        "каучуковый фикус"
+      ],
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Мощные корни и кожистые листья. Плохо переносит сквозняки и смену места.",
+      "light": "bright-indirect",
+      "lightNote": "Чем больше света, тем плотнее листья. Пестролистные формы без яркого света теряют рисунок.",
+      "water": "dry-top",
+      "humidity": "medium",
+      "temp": [
+        18,
+        28
+      ],
+      "roots": {
+        "size": "thick",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          6.8
+        ],
+        "prefer": [
+          {
+            "component": "coco-chips",
+            "share": "30%",
+            "why": "Крупная фракция под мощные корни"
+          },
+          {
+            "component": "coco-peat",
+            "share": "25%",
+            "why": "Влагоёмкая основа"
+          },
+          {
+            "component": "perlite",
+            "share": "25%",
+            "why": "Воздух"
+          },
+          {
+            "component": "osmocote",
+            "share": "3–4%",
+            "why": "Быстро растёт и много ест"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "sand",
+            "why": "Утяжеляет большой горшок и не даёт ничего полезного"
+          }
+        ],
+        "note": "Растёт крупным, поэтому объём горшка большой — тем важнее аэрация, чтобы в глубине не образовались мокрые зоны."
+      },
+      "pot": "Тяжёлый и устойчивый: взрослое растение перевешивает",
+      "toxicToPets": true,
+      "growth": "fast",
+      "propagation": [
+        "верхушечные черенки",
+        "воздушные отводки"
+      ],
+      "quirk": "Млечный сок на срезе раздражает кожу. Работай в перчатках и присыпай срез углём.",
+      "visual": {
+        "form": "tree",
+        "leaf": "oval",
+        "palette": "dark"
+      },
+      "tags": [
+        "древовидное",
+        "крупное"
+      ],
+      "relatedNotes": [
+        "care/pots/size",
+        "care/nutrition/fertilizers"
+      ]
+    },
+    {
+      "id": "dracaena",
+      "name": "Драцена",
+      "latin": "Dracaena fragrans",
+      "family": "Спаржевые",
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Часто зовут пальмой, хотя это не пальма. Чувствительна к фтору и хлору в водопроводной воде.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "waterNote": "Реагирует на качество воды сильнее большинства: коричневые кончики листьев — почти всегда про воду, а не про полив.",
+      "humidity": "medium",
+      "temp": [
+        18,
+        27
+      ],
+      "roots": {
+        "size": "medium",
+        "fraction": "medium"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "40%",
+            "why": "Ровная влагоёмкость"
+          },
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Воздух в глубине высокого горшка"
+          },
+          {
+            "component": "zeolite",
+            "share": "5–10%",
+            "why": "Стабилизирует питание"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "sand",
+            "why": "В высоком горшке усугубляет застой у дна"
+          }
+        ],
+        "note": "Высокий горшок — риск мокрого дна. Аэрация важнее, чем кажется для такого «неприхотливого» растения."
+      },
+      "pot": "Устойчивый, высокий",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "стеблевые черенки",
+        "верхушка"
+      ],
+      "visual": {
+        "form": "upright",
+        "leaf": "strap",
+        "palette": "green"
+      },
+      "tags": [
+        "древовидное"
+      ],
+      "relatedNotes": [
+        "care/water/water-quality",
+        "care/water/basics"
+      ]
+    },
+    {
+      "id": "crassula",
+      "name": "Крассула",
+      "latin": "Crassula ovata",
+      "family": "Толстянковые",
+      "aliases": [
+        "денежное дерево",
+        "толстянка"
+      ],
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Суккулент с тонкими корнями и толстыми листьями. Мелкая фракция обязательна.",
+      "light": "direct",
+      "lightNote": "Любит прямое солнце, но приучать надо постепенно — иначе ожог. Без солнца вытягивается и роняет листья.",
+      "water": "dry-through",
+      "humidity": "low",
+      "temp": [
+        12,
+        28
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          7
+        ],
+        "prefer": [
+          {
+            "component": "perlite",
+            "share": "35%",
+            "why": "Мелкий перлит: воздух под тонкие корешки"
+          },
+          {
+            "component": "pumice",
+            "share": "25%",
+            "why": "Минеральная основа, быстрый отвод воды"
+          },
+          {
+            "component": "coco-peat",
+            "share": "25%",
+            "why": "Немного влаги, мелкая фракция"
+          },
+          {
+            "component": "zeolite",
+            "share": "5%",
+            "why": "Кальций для крепких тканей"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "coco-chips",
+            "why": "Крупная фракция: тонким корешкам не за что зацепиться"
+          },
+          {
+            "component": "peat",
+            "why": "Слишком влагоёмкий для суккулента"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Удерживает влагу там, где нужна засуха"
+          }
+        ],
+        "note": "Минеральный уклон плюс мелкая фракция. Это сочетание часто путают: минеральный не значит крупный."
+      },
+      "pot": "Тесный, лучше глина — быстрее просыхает",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "листовые черенки",
+        "стеблевые черенки"
+      ],
+      "quirk": "Сброшенный лист, упавший в тот же горшок, сам укоренится. Так одна крассула превращается в заросли.",
+      "visual": {
+        "form": "tree",
+        "leaf": "round",
+        "palette": "green"
+      },
+      "tags": [
+        "суккулент",
+        "устойчивое"
+      ],
+      "relatedNotes": [
+        "care/medium/fraction",
+        "care/pots/materials",
+        "care/light/basics"
+      ]
+    },
+    {
+      "id": "aloe-vera",
+      "name": "Алоэ вера",
+      "latin": "Aloe vera",
+      "family": "Асфоделовые",
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Суккулент с тонкими корнями. Требует солнца и не терпит мокрого субстрата.",
+      "light": "direct",
+      "water": "dry-through",
+      "waterNote": "Полная просушка. Листья при жажде становятся тоньше и подворачиваются — это надёжный индикатор.",
+      "humidity": "low",
+      "temp": [
+        13,
+        30
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          7.5
+        ],
+        "prefer": [
+          {
+            "component": "pumice",
+            "share": "30%",
+            "why": "Основа минеральной смеси"
+          },
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Воздух, не холодный"
+          },
+          {
+            "component": "coco-peat",
+            "share": "20%",
+            "why": "Минимум влагоёмкости"
+          },
+          {
+            "component": "zeolite",
+            "share": "5–10%",
+            "why": "Минеральное питание"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "peat",
+            "why": "Держит воду у корневой шейки — начинается гниль"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Противоположность тому, что нужно суккуленту"
+          },
+          {
+            "component": "biohumus",
+            "why": "Органика при редком поливе закисает"
+          }
+        ]
+      },
+      "pot": "Неглубокий, глина или керамика",
+      "toxicToPets": true,
+      "growth": "medium",
+      "propagation": [
+        "детки",
+        "деление"
+      ],
+      "visual": {
+        "form": "rosette",
+        "leaf": "spike",
+        "palette": "green"
+      },
+      "tags": [
+        "суккулент",
+        "солнцелюбивое"
+      ],
+      "relatedNotes": [
+        "care/water/overwatering",
+        "care/pots/materials"
+      ]
+    },
+    {
+      "id": "peperomia",
+      "name": "Пеперомия",
+      "latin": "Peperomia",
+      "family": "Перечные",
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Тонкие корешки при плотных суккулентных листьях. Часто страдает от слишком крупной фракции.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "waterNote": "Листья запасают воду, корни маленькие. Перелив для неё опаснее недолива.",
+      "humidity": "medium",
+      "temp": [
+        18,
+        26
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "35%",
+            "why": "Мелкая фракция, за которую корешки цепляются"
+          },
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Мелкий перлит для воздуха"
+          },
+          {
+            "component": "pine-bark",
+            "share": "15%",
+            "why": "Мелкая кора вместо части торфа"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "coco-chips",
+            "why": "Тонкие корни висят в пустоте между крупными кусками и сохнут"
+          },
+          {
+            "component": "keramzit",
+            "why": "Крупный и холодный — двойной минус для мелких корней"
+          },
+          {
+            "component": "sand",
+            "why": "Мелко, но плотно: поры забиваются"
+          }
+        ],
+        "note": "Тот самый случай из заметки про фракцию: правильный состав в неправильном размере не работает."
+      },
+      "pot": "Маленький и неглубокий",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "листовые черенки",
+        "стеблевые черенки"
+      ],
+      "visual": {
+        "form": "clump",
+        "leaf": "round",
+        "palette": "green"
+      },
+      "tags": [
+        "безопасное",
+        "компактное"
+      ],
+      "relatedNotes": [
+        "care/medium/fraction",
+        "care/water/overwatering"
+      ]
+    },
+    {
+      "id": "philodendron-scandens",
+      "name": "Филодендрон лазящий",
+      "latin": "Philodendron hederaceum",
+      "family": "Ароидные",
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Быстрорастущая ароидная лиана. Устойчива к ошибкам, предпочитает крупную фракцию.",
+      "light": "partial",
+      "water": "dry-top",
+      "humidity": "medium",
+      "temp": [
+        18,
+        27
+      ],
+      "roots": {
+        "size": "medium",
+        "fraction": "medium"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-chips",
+            "share": "30%",
+            "why": "Воздух и влага одновременно"
+          },
+          {
+            "component": "coco-peat",
+            "share": "30%",
+            "why": "Основа влагоёмкости"
+          },
+          {
+            "component": "perlite",
+            "share": "25%",
+            "why": "Аэрация"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Антисептик"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "sand",
+            "why": "Бесполезный балласт в такой смеси"
+          }
+        ]
+      },
+      "pot": "С опорой: в природе это лиана",
+      "toxicToPets": true,
+      "growth": "fast",
+      "propagation": [
+        "черенки"
+      ],
+      "visual": {
+        "form": "vine",
+        "leaf": "heart",
+        "palette": "green"
+      },
+      "tags": [
+        "ароидное",
+        "лиана",
+        "для начинающих"
+      ],
+      "relatedNotes": [
+        "care/medium/recipes",
+        "care/medium/fraction"
+      ]
+    },
+    {
+      "id": "scindapsus-pictus",
+      "name": "Сциндапсус пиктус",
+      "latin": "Scindapsus pictus",
+      "family": "Ароидные",
+      "aliases": [
+        "серебряный сциндапсус"
+      ],
+      "rarity": "interesting",
+      "difficulty": 2,
+      "summary": "Серебристый напыл на листьях. Как эпипремнум, но с большими требованиями к воздуху у корней.",
+      "light": "bright-indirect",
+      "lightNote": "Серебристый рисунок ярче при хорошем рассеянном свете. В тени листья мельчают.",
+      "water": "dry-top",
+      "humidity": "medium",
+      "temp": [
+        18,
+        27
+      ],
+      "roots": {
+        "size": "medium",
+        "fraction": "medium"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-chips",
+            "share": "30%",
+            "why": "Воздушные карманы для эпифитных корней"
+          },
+          {
+            "component": "coco-peat",
+            "share": "30%",
+            "why": "Влагоёмкая часть"
+          },
+          {
+            "component": "perlite",
+            "share": "25%",
+            "why": "Аэрация"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "sand",
+            "why": "Убивает воздушность смеси"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Излишняя влага у эпифитных корней"
+          }
+        ]
+      },
+      "toxicToPets": true,
+      "growth": "medium",
+      "propagation": [
+        "черенки"
+      ],
+      "visual": {
+        "form": "vine",
+        "leaf": "heart",
+        "palette": "silver"
+      },
+      "tags": [
+        "ароидное",
+        "лиана",
+        "пестролистное"
+      ],
+      "relatedNotes": [
+        "care/medium/recipes",
+        "care/light/basics"
+      ]
+    },
+    {
+      "id": "alocasia",
+      "name": "Алоказия",
+      "latin": "Alocasia",
+      "family": "Ароидные",
+      "aliases": [
+        "слоновье ухо"
+      ],
+      "rarity": "interesting",
+      "difficulty": 4,
+      "summary": "Крупные листья на длинных черешках. Чувствительна к рассогласованию света, влажности и режима полива.",
+      "light": "bright-indirect",
+      "lightNote": "Много яркого рассеянного, без прямого солнца. При недостатке света останавливается и начинает сбрасывать листья.",
+      "water": "dry-top",
+      "waterNote": "Верхний слой просыхает — поливаем. При нехватке света субстрат просыхает медленно, и риск гнили клубня растёт.",
+      "humidity": "high",
+      "temp": [
+        20,
+        28
+      ],
+      "roots": {
+        "size": "thick",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-chips",
+            "share": "30%",
+            "why": "Крупная фракция под мясистые корни и клубень"
+          },
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Максимум воздуха: главный риск — гниль клубня"
+          },
+          {
+            "component": "pine-bark",
+            "share": "20%",
+            "why": "Воздух плюс лёгкое подкисление"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Антисептик для уязвимого клубня"
+          },
+          {
+            "component": "sphagnum",
+            "share": "10%",
+            "why": "Точки влажности без плотной массы"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "peat",
+            "why": "Плотная мокрая масса вокруг клубня повышает риск гнили"
+          },
+          {
+            "component": "sand",
+            "why": "Уплотняет и держит воду"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Слишком влагоёмко для клубневого растения"
+          }
+        ],
+        "note": "Аэрация важнее влагоёмкости. Один и тот же субстрат у разных людей работает по-разному: он взаимодействует с освещённостью, влажностью воздуха и режимом полива."
+      },
+      "pot": "Прозрачный пластик — за клубнем нужно наблюдать",
+      "toxicToPets": true,
+      "growth": "fast",
+      "propagation": [
+        "деление клубней",
+        "детки"
+      ],
+      "quirk": "Умеет уходить в спячку: сбрасывает всё до клубня и выглядит мёртвой. Не выбрасывай — держи субстрат почти сухим и жди.",
+      "visual": {
+        "form": "clump",
+        "leaf": "arrow",
+        "palette": "dark"
+      },
+      "tags": [
+        "ароидное",
+        "капризное",
+        "крупнолистное"
+      ],
+      "relatedNotes": [
+        "care/medium/why-loose",
+        "care/light/basics",
+        "care/medium/definitions"
+      ],
+      "article": true
+    },
+    {
+      "id": "anthurium",
+      "name": "Антуриум",
+      "latin": "Anthurium andraeanum",
+      "family": "Ароидные",
+      "aliases": [
+        "мужское счастье"
+      ],
+      "rarity": "interesting",
+      "difficulty": 3,
+      "summary": "Эпифит, который продаётся в торфе. Пересадка в крупную фракцию заметно улучшает его состояние.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "waterNote": "Любит влажный воздух и умеренно влажный субстрат, но корни должны дышать постоянно.",
+      "humidity": "high",
+      "temp": [
+        20,
+        28
+      ],
+      "roots": {
+        "size": "thick",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "pine-bark",
+            "share": "30%",
+            "why": "Эпифитные корни живут на коре, а не в земле"
+          },
+          {
+            "component": "coco-chips",
+            "share": "25%",
+            "why": "Крупная фракция плюс запас влаги"
+          },
+          {
+            "component": "perlite",
+            "share": "20%",
+            "why": "Воздух"
+          },
+          {
+            "component": "sphagnum",
+            "share": "15%",
+            "why": "Влажность у корней без застоя"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Антисептик"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "peat",
+            "why": "Магазинный торф вокруг эпифитных корней — причина, по которой антуриумы «просто чахнут»"
+          },
+          {
+            "component": "sand",
+            "why": "Забивает воздушные карманы"
+          }
+        ],
+        "note": "Практически субстрат для орхидей. Если антуриум куплен в торфе, пересадка в крупную фракцию — лучшее, что можно для него сделать."
+      },
+      "pot": "Прозрачный, тесный",
+      "toxicToPets": true,
+      "growth": "medium",
+      "propagation": [
+        "деление куста"
+      ],
+      "visual": {
+        "form": "clump",
+        "leaf": "arrow",
+        "palette": "green"
+      },
+      "tags": [
+        "ароидное",
+        "эпифит",
+        "цветущее"
+      ],
+      "relatedNotes": [
+        "care/medium/fraction",
+        "care/medium/transplant-stress"
+      ]
+    },
+    {
+      "id": "calathea",
+      "name": "Калатея",
+      "latin": "Goeppertia",
+      "family": "Марантовые",
+      "rarity": "interesting",
+      "difficulty": 4,
+      "summary": "Настоящий сциофит: яркий свет ей физически вреден. Чувствительна к жёсткости воды.",
+      "light": "shade",
+      "lightNote": "Облигатный сциофит: на прямом солнце начинается фотоингибиция — листья бледнеют, сохнут, покрываются пятнами. Северное окно для неё оптимум, а не компромисс.",
+      "water": "keep-moist",
+      "waterNote": "Стабильно слегка влажный субстрат и только мягкая вода. Жёсткая вода и хлор проявляются сухими коричневыми краями.",
+      "humidity": "high",
+      "temp": [
+        18,
+        26
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.3
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "45–50%",
+            "why": "Больше кокоса, чем обычно: нужна ровная влажность без пересыхания"
+          },
+          {
+            "component": "perlite",
+            "share": "25%",
+            "why": "Мелкий перлит — воздух при постоянной влажности"
+          },
+          {
+            "component": "sphagnum",
+            "share": "15%",
+            "why": "Сглаживает колебания влажности"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "charcoal",
+            "why": "Щелочит, а калатея любит покислее — один из тех случаев, когда полезный компонент вредит"
+          },
+          {
+            "component": "keramzit",
+            "why": "Холодный и подщелачивает: двойной промах для неё"
+          },
+          {
+            "component": "coco-chips",
+            "why": "Слишком крупно для тонких корней"
+          },
+          {
+            "component": "sand",
+            "why": "Плотно и холодно"
+          }
+        ],
+        "note": "Больше кокоса, мелкая фракция, без угля и камней. Кислотность держим ближе к 5.5–6."
+      },
+      "pot": "Неглубокий, пластик — держит влагу ровнее глины",
+      "toxicToPets": false,
+      "growth": "medium",
+      "propagation": [
+        "деление куста"
+      ],
+      "quirk": "Складывает листья на ночь и расправляет утром — это никтинастия, движение по циклу освещения. Если листья не раскрываются днём, ей чего-то не хватает.",
+      "visual": {
+        "form": "clump",
+        "leaf": "oval",
+        "palette": "dark"
+      },
+      "tags": [
+        "безопасное",
+        "капризное",
+        "для тени"
+      ],
+      "relatedNotes": [
+        "care/light/basics",
+        "care/water/water-quality",
+        "care/medium/acidity"
+      ],
+      "article": true
+    },
+    {
+      "id": "hoya-carnosa",
+      "name": "Хойя",
+      "latin": "Hoya carnosa",
+      "family": "Кутровые",
+      "aliases": [
+        "восковой плющ"
+      ],
+      "rarity": "interesting",
+      "difficulty": 2,
+      "summary": "Суккулентный эпифит с плотными восковыми листьями. Цветёт в тесном горшке, на многолетних цветоносах.",
+      "light": "bright-indirect",
+      "lightNote": "Для цветения нужен яркий свет. Немного прямого утреннего солнца только на пользу.",
+      "water": "dry-through",
+      "waterNote": "Просушка почти полная. Листья мягчеют при жажде — надёжнее любого графика.",
+      "humidity": "medium",
+      "temp": [
+        16,
+        28
+      ],
+      "roots": {
+        "size": "medium",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          6.8
+        ],
+        "prefer": [
+          {
+            "component": "pine-bark",
+            "share": "35%",
+            "why": "Эпифиту нужна кора, а не грунт"
+          },
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Воздух и быстрый отвод воды"
+          },
+          {
+            "component": "coco-chips",
+            "share": "20%",
+            "why": "Небольшой запас влаги"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Антисептик при редком поливе"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "peat",
+            "why": "Плотная влажная масса у эпифитных корней ведёт к гнили"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Слишком влагоёмко"
+          },
+          {
+            "component": "sand",
+            "why": "Уплотняет смесь"
+          }
+        ],
+        "note": "Почти чистая кора с перлитом. Хойя предпочитает тесный горшок — не пересаживай без необходимости."
+      },
+      "pot": "Тесный, с опорой для побегов",
+      "toxicToPets": false,
+      "growth": "medium",
+      "propagation": [
+        "черенки с двумя узлами"
+      ],
+      "quirk": "Никогда не обрезай цветонос: на нём каждый год образуются новые соцветия. Убрал цветонос — потерял цветение на сезоны вперёд.",
+      "visual": {
+        "form": "vine",
+        "leaf": "oval",
+        "palette": "green"
+      },
+      "tags": [
+        "эпифит",
+        "безопасное",
+        "цветущее"
+      ],
+      "relatedNotes": [
+        "care/medium/fraction",
+        "care/pots/size"
+      ],
+      "article": true
+    },
+    {
+      "id": "pilea-peperomioides",
+      "name": "Пилея пеперомиевидная",
+      "latin": "Pilea peperomioides",
+      "family": "Крапивные",
+      "aliases": [
+        "китайское денежное дерево"
+      ],
+      "rarity": "interesting",
+      "difficulty": 2,
+      "summary": "Круглые листья на длинных черешках, много деток от корня. Корни тонкие — фракция мелкая.",
+      "light": "bright-indirect",
+      "lightNote": "Тянется к свету и заваливается на одну сторону. Поворачивай горшок раз в неделю.",
+      "water": "dry-top",
+      "humidity": "medium",
+      "temp": [
+        16,
+        26
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          5.8,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "40%",
+            "why": "Мелкая влагоёмкая основа"
+          },
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Мелкий перлит: воздух без крупных пустот"
+          },
+          {
+            "component": "zeolite",
+            "share": "5–10%",
+            "why": "Кальций и магний"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "coco-chips",
+            "why": "Крупная фракция не для тонких корешков"
+          },
+          {
+            "component": "sand",
+            "why": "Забивает поры"
+          }
+        ]
+      },
+      "pot": "Неглубокий, чуть тесный",
+      "toxicToPets": false,
+      "growth": "medium",
+      "propagation": [
+        "детки от корня",
+        "черенки"
+      ],
+      "quirk": "Детки лезут из субстрата рядом с материнским растением. Отделять можно, когда у детки 3–4 своих листа.",
+      "visual": {
+        "form": "clump",
+        "leaf": "round",
+        "palette": "green"
+      },
+      "tags": [
+        "безопасное",
+        "компактное"
+      ],
+      "relatedNotes": [
+        "care/medium/fraction",
+        "care/light/basics"
+      ],
+      "article": true
+    },
+    {
+      "id": "platycerium",
+      "name": "Платицериум",
+      "latin": "Platycerium bifurcatum",
+      "family": "Многоножковые",
+      "aliases": [
+        "олений рог"
+      ],
+      "rarity": "interesting",
+      "difficulty": 3,
+      "summary": "Папоротник-эпифит с двумя типами листьев. Живёт на блоке или в мохе, а не в грунте.",
+      "light": "partial",
+      "lightNote": "Яркий рассеянный или полутень. Прямое солнце сжигает вайи.",
+      "water": "keep-moist",
+      "waterNote": "Погружением: снять с опоры и окунуть, дать стечь. Верхний полив по мху работает хуже.",
+      "humidity": "high",
+      "temp": [
+        18,
+        26
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          5,
+          6
+        ],
+        "prefer": [
+          {
+            "component": "sphagnum",
+            "share": "основа",
+            "why": "Держит влагу и воздух одновременно — родная среда эпифита"
+          },
+          {
+            "component": "pine-bark",
+            "share": "30%",
+            "why": "Опора и воздух"
+          },
+          {
+            "component": "coco-chips",
+            "share": "20%",
+            "why": "Структура, которая не слипается"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "charcoal",
+            "why": "Папоротники любят кислое, а уголь щелочит — ему уголь не нужен"
+          },
+          {
+            "component": "peat",
+            "why": "Плотная масса вокруг эпифитных корней"
+          },
+          {
+            "component": "sand",
+            "why": "Не имеет смысла для эпифита"
+          }
+        ],
+        "note": "Классический эпифит: субстрата в привычном смысле нет. Мох плюс кора — и опора."
+      },
+      "pot": "Блок, корзина или подвесная конструкция",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "детки",
+        "спорами (сложно)"
+      ],
+      "quirk": "Круглые «щитовые» листья у основания — не больные и не лишние. Они прикрывают корни и со временем буреют. Не обрывай их.",
+      "visual": {
+        "form": "fern",
+        "leaf": "frond",
+        "palette": "green"
+      },
+      "tags": [
+        "папоротник",
+        "эпифит",
+        "безопасное"
+      ],
+      "relatedNotes": [
+        "care/medium/acidity",
+        "care/water/watering-methods"
+      ],
+      "article": true
+    },
+    {
+      "id": "adiantum",
+      "name": "Адиантум",
+      "latin": "Adiantum raddianum",
+      "family": "Птерисовые",
+      "aliases": [
+        "венерин волос"
+      ],
+      "rarity": "interesting",
+      "difficulty": 4,
+      "summary": "Папоротник с тонкими вайями. Одна пересушка субстрата — и часть листьев уходит безвозвратно.",
+      "light": "shade",
+      "lightNote": "Сциофит: яркий свет вреден. Северное окно или глубина комнаты с досветкой.",
+      "water": "keep-moist",
+      "waterNote": "Никогда не пересушивать. Даже однократная просушка до сухого субстрата стоит растению половины листьев.",
+      "humidity": "high",
+      "temp": [
+        18,
+        24
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          5,
+          6
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "40%",
+            "why": "Ровная влажность, мелкая фракция"
+          },
+          {
+            "component": "sphagnum",
+            "share": "20%",
+            "why": "Подкисляет и держит влагу"
+          },
+          {
+            "component": "perlite",
+            "share": "25%",
+            "why": "Воздух в постоянно влажной смеси"
+          },
+          {
+            "component": "pine-bark",
+            "share": "15%",
+            "why": "Мелкая кора для подкисления и структуры"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "charcoal",
+            "why": "Папоротникам уголь нельзя: они любят кислое, а он щелочит"
+          },
+          {
+            "component": "keramzit",
+            "why": "Холодный и подщелачивает"
+          },
+          {
+            "component": "coco-chips",
+            "why": "Слишком крупно для тончайших корней"
+          },
+          {
+            "component": "sand",
+            "why": "Плотно и холодно"
+          }
+        ],
+        "note": "Кислая мелкая смесь без угля и камней. Тот же принцип, что у калатеи, только строже по влажности."
+      },
+      "pot": "Неглубокий пластик, влагу держит ровнее",
+      "toxicToPets": false,
+      "growth": "medium",
+      "propagation": [
+        "деление куста"
+      ],
+      "quirk": "Если вайи высохли полностью — обрежь всё под корень и продолжай поливать. Часто отрастает заново из корневища.",
+      "visual": {
+        "form": "fern",
+        "leaf": "frond",
+        "palette": "green"
+      },
+      "tags": [
+        "папоротник",
+        "безопасное",
+        "капризное",
+        "для тени"
+      ],
+      "relatedNotes": [
+        "care/medium/acidity",
+        "care/light/basics",
+        "care/water/basics"
+      ],
+      "article": true
+    },
+    {
+      "id": "begonia-maculata",
+      "name": "Бегония макулата",
+      "latin": "Begonia maculata",
+      "family": "Бегониевые",
+      "aliases": [
+        "бегония в горошек"
+      ],
+      "rarity": "interesting",
+      "difficulty": 3,
+      "summary": "Пятнистые листья с малиновой изнанкой. Тонкие корни, высокие требования к влажности воздуха.",
+      "light": "bright-indirect",
+      "lightNote": "Яркий рассеянный, без прямого солнца. В тени рисунок тускнеет.",
+      "water": "dry-top",
+      "waterNote": "Поливать под корень, не на листья: капли на бархатистых листьях оставляют пятна и провоцируют грибок.",
+      "humidity": "high",
+      "temp": [
+        18,
+        26
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          5.8,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "coco-peat",
+            "share": "40%",
+            "why": "Мелкая влагоёмкая основа"
+          },
+          {
+            "component": "perlite",
+            "share": "30%",
+            "why": "Воздух: корни склонны к гнили"
+          },
+          {
+            "component": "pine-bark",
+            "share": "15%",
+            "why": "Структура и подкисление"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "coco-chips",
+            "why": "Крупно для тонких корней"
+          },
+          {
+            "component": "sand",
+            "why": "Уплотняет, повышает риск гнили"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Излишняя влага у чувствительной корневой шейки"
+          }
+        ]
+      },
+      "pot": "Неглубокий, тесный",
+      "toxicToPets": true,
+      "growth": "fast",
+      "propagation": [
+        "стеблевые черенки",
+        "листовые черенки"
+      ],
+      "visual": {
+        "form": "clump",
+        "leaf": "oval",
+        "palette": "dark"
+      },
+      "tags": [
+        "пестролистное",
+        "капризное"
+      ],
+      "relatedNotes": [
+        "care/water/watering-methods",
+        "care/medium/fraction"
+      ]
+    },
+    {
+      "id": "tillandsia",
+      "name": "Тилландсия",
+      "latin": "Tillandsia",
+      "family": "Бромелиевые",
+      "aliases": [
+        "атмосферная тилландсия",
+        "воздушное растение"
+      ],
+      "rarity": "interesting",
+      "difficulty": 3,
+      "summary": "Растение вообще без субстрата. Живёт на воздухе и берёт воду и питание чешуйками на листьях.",
+      "light": "bright-indirect",
+      "lightNote": "Яркий рассеянный. Без света не работает фотосинтез, а запаса воды в ней почти нет.",
+      "water": "dry-through",
+      "waterNote": "Не полив, а замачивание: окунать в воду на 20–30 минут раз в 1–2 недели, потом обязательно дать стечь и просохнуть вниз головой.",
+      "humidity": "high",
+      "temp": [
+        15,
+        30
+      ],
+      "substrate": {
+        "note": "Субстрата нет вообще — и это лучшая иллюстрация того, что «субстрат» и «грунт» не синонимы. Корни у тилландсии нужны только чтобы держаться за опору, воду и питание она берёт трихомами на листьях. Никакой земли, мха или камней ей не требуется."
+      },
+      "pot": "Ничего: коряга, стекло, ракушка — что угодно с доступом воздуха",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "детки"
+      ],
+      "quirk": "Если после замачивания оставить воду в основании розетки, растение сгниёт изнутри. Обязательно переверни и вытряхни.",
+      "visual": {
+        "form": "rosette",
+        "leaf": "strap",
+        "palette": "silver"
+      },
+      "tags": [
+        "эпифит",
+        "безопасное",
+        "без субстрата"
+      ],
+      "relatedNotes": [
+        "care/medium/definitions",
+        "care/water/watering-methods"
+      ],
+      "article": true
+    },
+    {
+      "id": "lithops",
+      "name": "Литопсы",
+      "latin": "Lithops",
+      "family": "Аизовые",
+      "aliases": [
+        "живые камни"
+      ],
+      "rarity": "interesting",
+      "difficulty": 5,
+      "summary": "Два сросшихся листа, похожих на камни. Во время линьки полив прекращают полностью.",
+      "light": "direct",
+      "lightNote": "Максимум прямого солнца. При недостатке света вытягиваются и теряют форму.",
+      "water": "dry-through",
+      "waterNote": "Самое важное: во время линьки (появления новой пары листьев) полив прекращают полностью. Полив в этот момент разрывает растение.",
+      "humidity": "low",
+      "temp": [
+        10,
+        32
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          6,
+          7.5
+        ],
+        "prefer": [
+          {
+            "component": "pumice",
+            "share": "40%",
+            "why": "Основа: почти чистая минералка"
+          },
+          {
+            "component": "lava",
+            "share": "25%",
+            "why": "Стабильная крупная фракция, быстрый отвод воды"
+          },
+          {
+            "component": "perlite",
+            "share": "20%",
+            "why": "Воздух"
+          },
+          {
+            "component": "zeolite",
+            "share": "10%",
+            "why": "Минимальное минеральное питание"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "peat",
+            "why": "Любая существенная органика — гниль. Литопсам нужен почти чистый минерал"
+          },
+          {
+            "component": "coco-peat",
+            "why": "Слишком влагоёмко"
+          },
+          {
+            "component": "biohumus",
+            "why": "Питание провоцирует рост, от которого растение лопается"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Худшее, что можно добавить"
+          },
+          {
+            "component": "sand",
+            "why": "Мелкая фракция держит влагу у корневой шейки"
+          }
+        ],
+        "note": "Органики почти нет. Единственный случай в этой библиотеке, где влагоёмкость субстрата надо сознательно минимизировать."
+      },
+      "pot": "Глубокий и узкий: корень уходит вниз",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "семена"
+      ],
+      "quirk": "Раз в год старая пара листьев усыхает, отдавая всё новой. В этот период растение выглядит умирающим — и трогать его нельзя.",
+      "visual": {
+        "form": "stone",
+        "leaf": "oval",
+        "palette": "grey"
+      },
+      "tags": [
+        "суккулент",
+        "безопасное",
+        "для опытных"
+      ],
+      "relatedNotes": [
+        "care/medium/recipes",
+        "care/water/overwatering",
+        "care/light/basics"
+      ],
+      "article": true
+    },
+    {
+      "id": "dionaea",
+      "name": "Венерина мухоловка",
+      "latin": "Dionaea muscipula",
+      "family": "Росянковые",
+      "aliases": [
+        "мухоловка"
+      ],
+      "rarity": "rare",
+      "difficulty": 5,
+      "summary": "Хищное растение, к которому не применимы общие правила: только дистиллят, кислый торф, никаких удобрений.",
+      "light": "direct",
+      "lightNote": "Максимум света, включая прямое солнце. В полутени слабеет и перестаёт формировать ловушки.",
+      "water": "keep-moist",
+      "waterNote": "Только дистиллированная вода или осмос, методом нижнего полива. Водопроводная и фильтрованная вода накапливает в субстрате соли, которые повреждают корни.",
+      "humidity": "high",
+      "temp": [
+        18,
+        30
+      ],
+      "roots": {
+        "size": "fine",
+        "fraction": "fine"
+      },
+      "substrate": {
+        "ph": [
+          3.5,
+          4.5
+        ],
+        "prefer": [
+          {
+            "component": "peat",
+            "share": "60–70%",
+            "why": "Кислый верховой торф без добавок — единственная подходящая основа"
+          },
+          {
+            "component": "perlite",
+            "share": "30–40%",
+            "why": "Воздух; промытый, без минеральных примесей"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "osmocote",
+            "why": "Азот растение получает из насекомых, а соли удобрений повреждают корни"
+          },
+          {
+            "component": "biohumus",
+            "why": "То же — любое питание в субстрате губительно"
+          },
+          {
+            "component": "zeolite",
+            "why": "Отдаёт минералы, а ей нужна бедная среда"
+          },
+          {
+            "component": "charcoal",
+            "why": "Щелочит, а нужен pH около 4"
+          },
+          {
+            "component": "keramzit",
+            "why": "Подщелачивает и добавляет минералов"
+          }
+        ],
+        "note": "Полная инверсия обычных правил: субстрат должен быть бедным, кислым и без единого удобрения. Если ты дочитал раздел про питание и минерализацию — теперь понятно, почему."
+      },
+      "pot": "Высокий пластик, в поддоне с дистиллятом",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "деление",
+        "семена"
+      ],
+      "quirk": "Зимой ей нужен настоящий период покоя при 5–10 °C на 3–4 месяца. Без него растение истощается — частая причина, по которой мухоловки не доживают до второго-третьего года.",
+      "visual": {
+        "form": "trap",
+        "leaf": "trap",
+        "palette": "green"
+      },
+      "tags": [
+        "хищное",
+        "безопасное",
+        "для опытных"
+      ],
+      "relatedNotes": [
+        "care/medium/mineralization",
+        "care/water/water-quality",
+        "care/nutrition/fertilizers",
+        "care/medium/acidity"
+      ],
+      "article": true
+    },
+    {
+      "id": "philodendron-melanochrysum",
+      "name": "Филодендрон меланохризум",
+      "latin": "Philodendron melanochrysum",
+      "family": "Ароидные",
+      "rarity": "rare",
+      "difficulty": 4,
+      "summary": "Тёмные бархатистые листья до полуметра длиной. Требует опоры, влажности и воздушного субстрата.",
+      "light": "bright-indirect",
+      "lightNote": "Яркий рассеянный без прямого солнца. Бархатистая поверхность легко получает ожог.",
+      "water": "dry-top",
+      "waterNote": "Верх просох — полив. Крупная фракция позволяет поливать чаще без риска.",
+      "humidity": "high",
+      "temp": [
+        20,
+        28
+      ],
+      "roots": {
+        "size": "thick",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.5
+        ],
+        "prefer": [
+          {
+            "component": "pine-bark",
+            "share": "30%",
+            "why": "Основа воздушной эпифитной смеси"
+          },
+          {
+            "component": "coco-chips",
+            "share": "25%",
+            "why": "Крупная фракция с запасом влаги"
+          },
+          {
+            "component": "perlite",
+            "share": "25%",
+            "why": "Воздух"
+          },
+          {
+            "component": "sphagnum",
+            "share": "15%",
+            "why": "Влажность у корней и на моховой опоре"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Антисептик"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "peat",
+            "why": "Плотная масса не даёт крупным корням дышать"
+          },
+          {
+            "component": "sand",
+            "why": "Забивает воздушные карманы"
+          }
+        ],
+        "note": "Чем крупнее фракция, тем крупнее вырастают листья: корням нужно за что цепляться и чем дышать."
+      },
+      "pot": "С моховой опорой — по ней растение поднимается и увеличивает листья",
+      "toxicToPets": true,
+      "growth": "medium",
+      "propagation": [
+        "черенки с узлом"
+      ],
+      "quirk": "Размер листа зависит от опоры. Без вертикальной поддержки растение стелется и листья остаются мелкими.",
+      "visual": {
+        "form": "vine",
+        "leaf": "heart",
+        "palette": "dark"
+      },
+      "tags": [
+        "ароидное",
+        "редкое",
+        "бархатистое"
+      ],
+      "relatedNotes": [
+        "care/medium/fraction",
+        "care/medium/recipes"
+      ]
+    },
+    {
+      "id": "anthurium-crystallinum",
+      "name": "Антуриум кристаллинум",
+      "latin": "Anthurium crystallinum",
+      "family": "Ароидные",
+      "rarity": "rare",
+      "difficulty": 4,
+      "summary": "Бархатистые листья с выраженными светлыми жилками. Выращивают ради листвы; субстрат — почти чистая кора.",
+      "light": "bright-indirect",
+      "lightNote": "Рассеянный свет, никакого прямого солнца.",
+      "water": "dry-top",
+      "humidity": "high",
+      "temp": [
+        20,
+        28
+      ],
+      "roots": {
+        "size": "thick",
+        "fraction": "coarse"
+      },
+      "substrate": {
+        "ph": [
+          5.5,
+          6.3
+        ],
+        "prefer": [
+          {
+            "component": "pine-bark",
+            "share": "35%",
+            "why": "Эпифитная основа"
+          },
+          {
+            "component": "sphagnum",
+            "share": "20%",
+            "why": "Влажность без плотности"
+          },
+          {
+            "component": "perlite",
+            "share": "20%",
+            "why": "Воздух"
+          },
+          {
+            "component": "coco-chips",
+            "share": "20%",
+            "why": "Структура и запас влаги"
+          },
+          {
+            "component": "charcoal",
+            "share": "до 10%",
+            "why": "Антисептик"
+          }
+        ],
+        "avoid": [
+          {
+            "component": "peat",
+            "why": "Верный способ потерять корни"
+          },
+          {
+            "component": "sand",
+            "why": "Не место в эпифитной смеси"
+          },
+          {
+            "component": "vermiculite",
+            "why": "Слишком влагоёмко"
+          }
+        ],
+        "note": "Практически орхидейный субстрат. Влажность воздуха для него важнее влажности субстрата."
+      },
+      "pot": "Прозрачный, тесный, с хорошим дренажем",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "деление",
+        "семена"
+      ],
+      "visual": {
+        "form": "clump",
+        "leaf": "heart",
+        "palette": "silver"
+      },
+      "tags": [
+        "ароидное",
+        "редкое",
+        "бархатистое"
+      ],
+      "relatedNotes": [
+        "care/medium/fraction",
+        "care/medium/transplant-stress"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FolderIcon, ListIcon } from './Icons';
+import { FolderIcon, ListIcon, LeafIcon, GrainIcon } from './Icons';
 import styles from './Header.module.css';
 
 interface HeaderProps {
@@ -21,6 +21,22 @@ export default function Header({ themeToggle }: HeaderProps) {
           <div className={styles.navRight}>
             <Link to="/folders" className={styles.iconLink} aria-label="Темы" title="Темы">
               <FolderIcon />
+            </Link>
+            <Link
+              to="/plants"
+              className={styles.iconLink}
+              aria-label="Библиотека растений"
+              title="Библиотека растений"
+            >
+              <LeafIcon />
+            </Link>
+            <Link
+              to="/components"
+              className={styles.iconLink}
+              aria-label="Компоненты субстрата"
+              title="Компоненты субстрата"
+            >
+              <GrainIcon />
             </Link>
             <Link
               to="/all"
@@ -53,6 +69,24 @@ export default function Header({ themeToggle }: HeaderProps) {
               >
                 <FolderIcon />
                 <span>Темы</span>
+              </Link>
+              <Link
+                to="/plants"
+                className={styles.mobileMenuItem}
+                role="menuitem"
+                onClick={() => setMenuOpen(false)}
+              >
+                <LeafIcon />
+                <span>Библиотека растений</span>
+              </Link>
+              <Link
+                to="/components"
+                className={styles.mobileMenuItem}
+                role="menuitem"
+                onClick={() => setMenuOpen(false)}
+              >
+                <GrainIcon />
+                <span>Компоненты субстрата</span>
               </Link>
               <Link
                 to="/all"

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import MarkdownContent from '../components/md/MarkdownContent';
 import { useNotes } from '../hooks/useNotes';
-import { getTopLevelFolder } from '../utils/folders';
+import { useMarkdown } from '../hooks/useMarkdown';
+import { getTopLevelFolder, getSubtopic, DEFAULT_SUBTOPIC } from '../utils/folders';
+import { buildCourseSequence, getCourseNavigation } from '../utils/courseNav';
 import ThemeBackground from '../components/ThemeBackground';
+import { CourseRail, CoursePager } from '../components/CourseNav';
 import { ArrowLeftIcon } from '../components/Icons';
 import s from '../styles/shared.module.css';
 
@@ -21,21 +23,31 @@ function useEffectiveSlug() {
 export default function NoteViewer() {
   const effectiveSlug = useEffectiveSlug();
   const [searchParams] = useSearchParams();
-  const { folders } = useNotes();
-  const [md, setMd] = React.useState<string | null>(null);
-  const [error, setError] = React.useState<string | null>(null);
-  const [basePath, setBasePath] = React.useState<string>(`${import.meta.env.BASE_URL}content/`);
+  const { notes, folders } = useNotes();
+
+  const contentRoot = `${import.meta.env.BASE_URL}content/`;
+  const candidates = React.useMemo(
+    () =>
+      effectiveSlug
+        ? [`${contentRoot}${effectiveSlug}/index.md`, `${contentRoot}${effectiveSlug}.md`]
+        : [],
+    [effectiveSlug, contentRoot]
+  );
+  const { md, error, basePath } = useMarkdown(candidates, contentRoot);
 
   const topFolder = getTopLevelFolder(effectiveSlug);
   const folderMeta = folders[topFolder];
 
-  // Extract subtopic (second segment of slug, e.g. "care/water/basics" → "water")
-  const slugParts = effectiveSlug.split('/');
-  const subtopicKey = slugParts.length >= 3 ? slugParts[1] : undefined;
-  const subtopicMeta = subtopicKey ? folderMeta?.subtopics?.[subtopicKey] : undefined;
+  const subtopicKey = getSubtopic(effectiveSlug);
+  const subtopicMeta =
+    subtopicKey === DEFAULT_SUBTOPIC ? undefined : folderMeta?.subtopics?.[subtopicKey];
 
   const theme = subtopicMeta?.theme ?? folderMeta?.theme;
   const accent = subtopicMeta?.accent ?? folderMeta?.accent;
+
+  const courseNav = notes
+    ? getCourseNavigation(buildCourseSequence(notes, topFolder, folderMeta), effectiveSlug)
+    : null;
 
   const from = searchParams.get('from');
   const fromFolder = searchParams.get('folder');
@@ -48,57 +60,6 @@ export default function NoteViewer() {
     backTo = `/folder/${encodeURIComponent(fromFolder)}`;
     backLabel = folderMeta?.title || fromFolder;
   }
-
-  React.useEffect(() => {
-    let cancelled = false;
-    async function load() {
-      if (!effectiveSlug) return;
-      const contentRoot = `${import.meta.env.BASE_URL}content/`;
-      const tryIndex = `${contentRoot}${effectiveSlug}/index.md`;
-      const tryFlat = `${contentRoot}${effectiveSlug}.md`;
-
-      async function fetchMarkdown(url: string) {
-        const r = await fetch(url);
-        if (!r.ok) return null;
-        const ct = r.headers.get('content-type') || '';
-        if (ct.includes('text/html')) return null;
-        const txt = await r.text();
-        if (/^\s*<!doctype html>/i.test(txt)) return null;
-        return txt;
-      }
-
-      try {
-        setError(null);
-        setMd(null);
-        const fromIndex = await fetchMarkdown(tryIndex);
-        if (fromIndex && !cancelled) {
-          setMd(fromIndex);
-          setBasePath(`${contentRoot}${effectiveSlug}/`);
-          return;
-        }
-        const fromFlat = await fetchMarkdown(tryFlat);
-        if (fromFlat && !cancelled) {
-          setMd(fromFlat);
-          const dir = effectiveSlug.replace(/[^/]+$/, '');
-          setBasePath(`${contentRoot}${dir}`);
-          return;
-        }
-        if (!cancelled) {
-          setError('Не удалось загрузить заметку');
-          setMd(null);
-        }
-      } catch (e: unknown) {
-        if (!cancelled) {
-          setError(e instanceof Error ? e.message : 'Ошибка');
-          setMd(null);
-        }
-      }
-    }
-    load();
-    return () => {
-      cancelled = true;
-    };
-  }, [effectiveSlug]);
 
   const transformUri = (uri: string) => {
     if (!uri) return uri;
@@ -119,6 +80,7 @@ export default function NoteViewer() {
             {backLabel}
           </Link>
         </div>
+        {courseNav && courseNav.siblings.length > 1 && <CourseRail nav={courseNav} />}
         {error && (
           <div className={s.errorBlock}>
             <p>Не удалось загрузить заметку</p>
@@ -137,11 +99,10 @@ export default function NoteViewer() {
         )}
         {md && (
           <article className={s.markdown}>
-            <ReactMarkdown remarkPlugins={[remarkGfm]} urlTransform={transformUri}>
-              {md}
-            </ReactMarkdown>
+            <MarkdownContent source={md} urlTransform={transformUri} />
           </article>
         )}
+        {md && courseNav && <CoursePager nav={courseNav} />}
       </div>
     </div>
   );

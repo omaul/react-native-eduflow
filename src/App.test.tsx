@@ -4,5 +4,5 @@ import App from './App';
 
 it('renders brand link', () => {
   render(<App />);
-  expect(screen.getByText(/Some Notes/i)).toBeInTheDocument();
+  expect(screen.getByText(/Что-то где-то растёт/i)).toBeInTheDocument();
 });

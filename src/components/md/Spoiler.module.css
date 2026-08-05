@@ -1,0 +1,58 @@
+.spoiler {
+  margin: var(--space-5) 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-subtle);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
+  transition: color var(--duration-fast) var(--easing-default);
+}
+
+/* Replace the native marker with our own chevron */
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary::marker {
+  content: '';
+}
+
+.summary:hover {
+  color: var(--color-text-secondary);
+}
+
+.chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  transform: rotate(-90deg);
+  transition: transform var(--duration-fast) var(--easing-default);
+}
+
+.spoiler[open] .chevron {
+  transform: rotate(0deg);
+}
+
+.body {
+  padding: 0 var(--space-4) var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.body > :first-child {
+  margin-top: var(--space-3);
+}
+
+.body > :last-child {
+  margin-bottom: 0;
+}

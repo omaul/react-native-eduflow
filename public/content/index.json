@@ -2,24 +2,48 @@
   "folders": {
     "care": {
       "title": "Уход за растениями",
-      "description": "Субстраты, полив, пересадка и другие основы",
+      "description": "Субстраты, полив, свет, горшки и питание — по порядку",
       "theme": "plants",
       "accent": "#4a7c59",
       "order": 1,
       "subtopics": {
-        "medium": { "title": "Субстрат и грунт", "order": 1 },
-        "water": { "title": "Полив", "theme": "water", "accent": "#3a8fbf", "order": 2 },
-        "light": { "title": "Свет", "order": 3 }
+        "basics": { "title": "С чего начать", "order": 1 },
+        "medium": { "title": "Субстрат и грунт", "order": 2 },
+        "water": { "title": "Полив", "theme": "water", "accent": "#3a8fbf", "order": 3 },
+        "light": { "title": "Свет", "order": 4 },
+        "pots": { "title": "Горшки", "order": 5 },
+        "nutrition": { "title": "Питание", "order": 6 }
       }
-    },
-    "species": {
-      "title": "Виды растений",
-      "description": "Каталог растений с особенностями ухода",
-      "accent": "#8c6d52",
-      "order": 2
     }
   },
+  "libraries": [
+    {
+      "id": "plants",
+      "title": "Библиотека растений",
+      "description": "Каталог домашних растений — от устойчивых до требовательных, с рекомендациями по субстрату",
+      "path": "/plants",
+      "badge": "Библиотека",
+      "accent": "#4a7c59",
+      "order": 2
+    },
+    {
+      "id": "components",
+      "title": "Компоненты субстрата",
+      "description": "Перлит, кокос, уголь, камни — и то, что лучше не использовать",
+      "path": "/components",
+      "badge": "Справочник",
+      "accent": "#8c6d52",
+      "order": 3
+    }
+  ],
   "notes": [
+    {
+      "slug": "care/basics/needs",
+      "title": "Что нужно растению",
+      "description": "Пять потребностей и почему они связаны между собой",
+      "tags": ["care", "base"],
+      "date": "2026-08-06"
+    },
     {
       "slug": "care/medium/definitions",
       "title": "Термины: грунт и субстрат",
@@ -35,6 +59,13 @@
       "date": "2025-10-01"
     },
     {
+      "slug": "care/medium/transplant-stress",
+      "title": "Стресс при смене субстрата",
+      "description": "Почему важно подбирать среду",
+      "tags": ["care", "practice"],
+      "date": "2025-10-01"
+    },
+    {
       "slug": "care/medium/why-loose",
       "title": "Рыхлый субстрат и аэрация",
       "description": "Влагоудержание + дренаж",
@@ -42,11 +73,46 @@
       "date": "2025-10-01"
     },
     {
-      "slug": "care/medium/transplant-stress",
-      "title": "Стресс при смене субстрата",
-      "description": "Почему важно подбирать среду",
+      "slug": "care/medium/good-substrate",
+      "title": "Каким должен быть хороший субстрат",
+      "description": "Четыре качества и симуляция, где это можно проверить руками",
+      "tags": ["care", "physics", "base"],
+      "date": "2026-08-06"
+    },
+    {
+      "slug": "care/medium/fraction",
+      "title": "Фракция: размер частиц под размер корней",
+      "description": "Почему одна смесь не подходит пеперомии и подходит монстере",
+      "tags": ["care", "physics"],
+      "date": "2026-08-06"
+    },
+    {
+      "slug": "care/medium/acidity",
+      "title": "Кислотность: что означает pH на упаковке",
+      "description": "Как кислотность решает, доступно ли питание корням",
+      "tags": ["care", "chemistry"],
+      "date": "2026-08-06"
+    },
+    {
+      "slug": "care/medium/mineralization",
+      "title": "Минерализация: почему от удобрений можно засушить",
+      "description": "Осмос против растения, когда солей стало слишком много",
+      "tags": ["care", "chemistry", "safety"],
+      "date": "2026-08-06"
+    },
+    {
+      "slug": "care/medium/components",
+      "title": "Компоненты: из чего собирают субстрат",
+      "description": "Четыре роли, признак «холодный» и что не стоит использовать",
       "tags": ["care", "practice"],
-      "date": "2025-10-01"
+      "date": "2026-08-06"
+    },
+    {
+      "slug": "care/medium/recipes",
+      "title": "Рецепты смесей",
+      "description": "Базовая формула и как подстроить её под свой дом",
+      "tags": ["care", "practice"],
+      "date": "2026-08-06"
     },
     {
       "slug": "care/water/basics",
@@ -89,6 +155,34 @@
       "description": "Белый LED, 10–14 часов, без фитоламп — и этого достаточно",
       "tags": ["care", "light", "practice"],
       "date": "2025-10-20"
+    },
+    {
+      "slug": "care/pots/size",
+      "title": "Размер горшка: сколько субстрата нужно",
+      "description": "Почему «побольше, чтобы потом не пересаживать» — плохая идея",
+      "tags": ["care", "pots", "base"],
+      "date": "2026-08-06"
+    },
+    {
+      "slug": "care/pots/materials",
+      "title": "Пластик, глина или керамика",
+      "description": "Материал горшка меняет частоту полива вдвое",
+      "tags": ["care", "pots", "practice"],
+      "date": "2026-08-06"
+    },
+    {
+      "slug": "care/nutrition/basics",
+      "title": "Питание: что растение ест",
+      "description": "NPK, микроэлементы и почему дефицит часто не про удобрения",
+      "tags": ["care", "nutrition", "base"],
+      "date": "2026-08-06"
+    },
+    {
+      "slug": "care/nutrition/fertilizers",
+      "title": "Удобрения: органика, минералка, пролонгированные",
+      "description": "Три формы питания и когда кормить не нужно",
+      "tags": ["care", "nutrition", "practice"],
+      "date": "2026-08-06"
     }
   ]
 }

@@ -2,17 +2,11 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useNotes } from '../hooks/useNotes';
 import { NoteMeta } from '../types';
-import { ROOT_FOLDER, getTopLevelFolder } from '../utils/folders';
+import { ROOT_FOLDER, getTopLevelFolder, getSubtopic } from '../utils/folders';
 import NoteMetaInfo from '../components/NoteMetaInfo';
 import ThemeBackground from '../components/ThemeBackground';
 import { ArrowLeftIcon } from '../components/Icons';
 import s from '../styles/shared.module.css';
-
-function getSubtopic(slug: string): string {
-  const parts = slug.split('/');
-  // slug like "care/medium/definitions" → subtopic = "medium"
-  return parts.length >= 3 ? parts[1] : '_default';
-}
 
 export default function FolderView() {
   const { folder } = useParams();

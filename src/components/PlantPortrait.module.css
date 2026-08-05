@@ -1,0 +1,94 @@
+/**
+ * Plant colours live here rather than in tokens: they describe the subject, not the UI.
+ * Each palette defines three leaf shades plus a stem colour, in both themes.
+ */
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.leaf {
+  stroke: none;
+}
+
+.stem {
+  stroke: var(--portrait-stem);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.tone0 {
+  fill: var(--portrait-1);
+}
+
+.tone1 {
+  fill: var(--portrait-2);
+}
+
+.tone2 {
+  fill: var(--portrait-3);
+}
+
+/* --- Palettes: light theme --- */
+
+.green {
+  --portrait-1: #4a7c59;
+  --portrait-2: #3c6a4a;
+  --portrait-3: #5f9169;
+  --portrait-stem: #6b7f5a;
+}
+
+.dark {
+  --portrait-1: #33513c;
+  --portrait-2: #26402f;
+  --portrait-3: #436a4d;
+  --portrait-stem: #4e6047;
+}
+
+.silver {
+  --portrait-1: #8ea896;
+  --portrait-2: #799484;
+  --portrait-3: #a9bfae;
+  --portrait-stem: #7d8f79;
+}
+
+.grey {
+  --portrait-1: #9aa08f;
+  --portrait-2: #85897a;
+  --portrait-3: #b1b6a4;
+  --portrait-stem: #8b8f80;
+}
+
+/* --- Palettes: dark theme — lifted so they stay visible on #121212 --- */
+
+:global([data-theme='dark']) .green {
+  --portrait-1: #5c9169;
+  --portrait-2: #497a55;
+  --portrait-3: #74a67f;
+  --portrait-stem: #7d9169;
+}
+
+:global([data-theme='dark']) .dark {
+  --portrait-1: #467052;
+  --portrait-2: #365a40;
+  --portrait-3: #578a64;
+  --portrait-stem: #607556;
+}
+
+:global([data-theme='dark']) .silver {
+  --portrait-1: #9db6a5;
+  --portrait-2: #87a291;
+  --portrait-3: #b8ccbd;
+  --portrait-stem: #8b9d86;
+}
+
+:global([data-theme='dark']) .grey {
+  --portrait-1: #a8ae9d;
+  --portrait-2: #939888;
+  --portrait-3: #bfc4b3;
+  --portrait-stem: #9a9e8f;
+}

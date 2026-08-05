@@ -22,7 +22,19 @@ export type FolderMeta = {
   subtopics?: Record<string, SubtopicMeta>;
 };
 
+/** A browsable catalog that lives outside the notes tree (plants, components) */
+export type LibraryMeta = {
+  id: string;
+  title: string;
+  description?: string;
+  path: string;
+  badge?: string;
+  accent?: string;
+  order?: number;
+};
+
 export type ContentIndex = {
   folders: Record<string, FolderMeta>;
+  libraries?: LibraryMeta[];
   notes: NoteMeta[];
 };

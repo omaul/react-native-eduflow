@@ -1,0 +1,309 @@
+/* Shared styles for the plant and component libraries */
+
+.intro {
+  margin: 0 0 var(--space-5);
+  color: var(--color-text-secondary);
+}
+
+.count {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* --- Grid of cards --- */
+
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) var(--easing-default),
+    background var(--duration-fast) var(--easing-default);
+}
+
+.card:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-subtle);
+  text-decoration: none;
+}
+
+/* Generative portrait — reserved height so cards never shift while loading */
+.cardPortrait {
+  display: block;
+  width: 84px;
+  height: 84px;
+  margin-bottom: var(--space-2);
+}
+
+.detailPortrait {
+  width: 132px;
+  height: 132px;
+  margin-bottom: var(--space-3);
+}
+
+.cardName {
+  font-weight: var(--weight-semibold);
+}
+
+.cardLatin {
+  margin-top: 2px;
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.cardSummary {
+  margin: var(--space-2) 0 var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.cardFooter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+/* --- Badges --- */
+
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  background: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+}
+
+.badgeWarn {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.badgeDanger {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.badgeOk {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+/* --- Empty state --- */
+
+.empty {
+  padding: var(--space-6) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.empty p {
+  margin: 0 0 var(--space-3);
+}
+
+/* --- Detail page --- */
+
+.detailHeader {
+  margin-bottom: var(--space-5);
+}
+
+.detailLatin {
+  margin: var(--space-1) 0 0;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.detailBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.detailSummary {
+  margin: var(--space-4) 0 0;
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.sectionTitle {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+}
+
+/* --- Parameter table --- */
+
+.params {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.paramRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.paramLabel {
+  flex: 0 0 11rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.paramValue {
+  flex: 1 1 12rem;
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+/* --- Substrate advice --- */
+
+.adviceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.advice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-subtle);
+  border-left: 3px solid var(--color-border);
+}
+
+.adviceGood {
+  border-left-color: var(--color-success);
+}
+
+.adviceBad {
+  border-left-color: var(--color-error);
+}
+
+.adviceName {
+  font-weight: var(--weight-medium);
+}
+
+.adviceShare {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.adviceWhy {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* --- Pros and cons --- */
+
+.prosCons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .prosCons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.prosConsTitle {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.prosConsList {
+  margin: 0;
+  padding-left: 1.25em;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.prosConsList li + li {
+  margin-top: var(--space-1);
+}
+
+/* --- Related links --- */
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.link {
+  display: block;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition:
+    border-color var(--duration-fast) var(--easing-default),
+    background var(--duration-fast) var(--easing-default);
+}
+
+.link:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-subtle);
+  text-decoration: none;
+}
+
+/* --- Article --- */
+
+.article {
+  line-height: var(--leading-relaxed);
+}

@@ -6,6 +6,10 @@ import NoteViewer from './pages/NoteViewer';
 import Folders from './pages/Folders';
 import FolderView from './pages/FolderView';
 import AllNotes from './pages/AllNotes';
+import PlantLibrary from './pages/PlantLibrary';
+import PlantDetail from './pages/PlantDetail';
+import ComponentLibrary from './pages/ComponentLibrary';
+import ComponentDetail from './pages/ComponentDetail';
 import { useTheme } from './hooks/useTheme';
 import headerStyles from './components/Header.module.css';
 import shared from './styles/shared.module.css';
@@ -35,6 +39,10 @@ function App() {
             <Route path="/folders" element={<Folders />} />
             <Route path="/folder/:folder" element={<FolderView />} />
             <Route path="/all" element={<AllNotes />} />
+            <Route path="/plants" element={<PlantLibrary />} />
+            <Route path="/plants/:id" element={<PlantDetail />} />
+            <Route path="/components" element={<ComponentLibrary />} />
+            <Route path="/components/:id" element={<ComponentDetail />} />
             <Route path="/note/:slug" element={<NoteViewer />} />
             <Route path="/note/*" element={<NoteViewer />} />
           </Routes>

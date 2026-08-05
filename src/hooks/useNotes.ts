@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { ContentIndex, NoteMeta, FolderMeta } from '../types';
+import { ContentIndex, NoteMeta, FolderMeta, LibraryMeta } from '../types';
 
 const INDEX_URL = import.meta.env.BASE_URL + 'content/index.json';
 
 export function useNotes() {
   const [notes, setNotes] = useState<NoteMeta[] | null>(null);
   const [folders, setFolders] = useState<Record<string, FolderMeta>>({});
+  const [libraries, setLibraries] = useState<LibraryMeta[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -17,9 +18,10 @@ export function useNotes() {
       .then((data: ContentIndex) => {
         setNotes(data.notes);
         setFolders(data.folders || {});
+        setLibraries(data.libraries || []);
       })
       .catch((e) => setError(e.message));
   }, []);
 
-  return { notes, folders, error };
+  return { notes, folders, libraries, error };
 }

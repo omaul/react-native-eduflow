@@ -86,7 +86,8 @@
         "care/medium/recipes",
         "care/pots/size"
       ],
-      "article": true
+      "article": true,
+      "genus": "Монстеры"
     },
     {
       "id": "epipremnum",
@@ -166,7 +167,8 @@
         "care/water/basics",
         "care/light/basics"
       ],
-      "article": true
+      "article": true,
+      "genus": "Эпипремнумы и сциндапсусы"
     },
     {
       "id": "sansevieria",
@@ -259,7 +261,8 @@
         "care/water/overwatering",
         "care/medium/recipes"
       ],
-      "article": true
+      "article": true,
+      "genus": "Драцены и сансевиерии"
     },
     {
       "id": "zamioculcas",
@@ -351,7 +354,8 @@
         "care/medium/why-loose",
         "care/pots/size"
       ],
-      "article": true
+      "article": true,
+      "genus": "Замиокулькасы"
     },
     {
       "id": "chlorophytum",
@@ -427,7 +431,8 @@
       "relatedNotes": [
         "care/water/water-quality",
         "care/pots/size"
-      ]
+      ],
+      "genus": "Хлорофитумы"
     },
     {
       "id": "spathiphyllum",
@@ -506,7 +511,8 @@
       "relatedNotes": [
         "care/water/basics",
         "care/pots/size"
-      ]
+      ],
+      "genus": "Спатифиллумы и аглаонемы"
     },
     {
       "id": "ficus-elastica",
@@ -586,7 +592,8 @@
       "relatedNotes": [
         "care/pots/size",
         "care/nutrition/fertilizers"
-      ]
+      ],
+      "genus": "Фикусы"
     },
     {
       "id": "dracaena",
@@ -656,7 +663,8 @@
       "relatedNotes": [
         "care/water/water-quality",
         "care/water/basics"
-      ]
+      ],
+      "genus": "Драцены и сансевиерии"
     },
     {
       "id": "crassula",
@@ -746,7 +754,8 @@
         "care/medium/fraction",
         "care/pots/materials",
         "care/light/basics"
-      ]
+      ],
+      "genus": "Суккуленты"
     },
     {
       "id": "aloe-vera",
@@ -829,7 +838,8 @@
       "relatedNotes": [
         "care/water/overwatering",
         "care/pots/materials"
-      ]
+      ],
+      "genus": "Суккуленты"
     },
     {
       "id": "peperomia",
@@ -908,7 +918,8 @@
       "relatedNotes": [
         "care/medium/fraction",
         "care/water/overwatering"
-      ]
+      ],
+      "genus": "Пеперомии и пилеи"
     },
     {
       "id": "philodendron-scandens",
@@ -982,7 +993,8 @@
       "relatedNotes": [
         "care/medium/recipes",
         "care/medium/fraction"
-      ]
+      ],
+      "genus": "Филодендроны"
     },
     {
       "id": "scindapsus-pictus",
@@ -1058,7 +1070,8 @@
       "relatedNotes": [
         "care/medium/recipes",
         "care/light/basics"
-      ]
+      ],
+      "genus": "Эпипремнумы и сциндапсусы"
     },
     {
       "id": "alocasia",
@@ -1155,7 +1168,8 @@
         "care/light/basics",
         "care/medium/definitions"
       ],
-      "article": true
+      "article": true,
+      "genus": "Алоказии"
     },
     {
       "id": "anthurium",
@@ -1243,7 +1257,8 @@
       "relatedNotes": [
         "care/medium/fraction",
         "care/medium/transplant-stress"
-      ]
+      ],
+      "genus": "Антуриумы"
     },
     {
       "id": "calathea",
@@ -1330,7 +1345,8 @@
         "care/water/water-quality",
         "care/medium/acidity"
       ],
-      "article": true
+      "article": true,
+      "genus": "Калатеи"
     },
     {
       "id": "hoya-carnosa",
@@ -1420,7 +1436,8 @@
         "care/medium/fraction",
         "care/pots/size"
       ],
-      "article": true
+      "article": true,
+      "genus": "Хойи"
     },
     {
       "id": "pilea-peperomioides",
@@ -1499,7 +1516,8 @@
         "care/medium/fraction",
         "care/light/basics"
       ],
-      "article": true
+      "article": true,
+      "genus": "Пеперомии и пилеи"
     },
     {
       "id": "platycerium",
@@ -1585,7 +1603,8 @@
         "care/medium/acidity",
         "care/water/watering-methods"
       ],
-      "article": true
+      "article": true,
+      "genus": "Папоротники"
     },
     {
       "id": "adiantum",
@@ -1681,7 +1700,8 @@
         "care/light/basics",
         "care/water/basics"
       ],
-      "article": true
+      "article": true,
+      "genus": "Папоротники"
     },
     {
       "id": "begonia-maculata",
@@ -1763,7 +1783,8 @@
       "relatedNotes": [
         "care/water/watering-methods",
         "care/medium/fraction"
-      ]
+      ],
+      "genus": "Бегонии"
     },
     {
       "id": "tillandsia",
@@ -1810,7 +1831,8 @@
         "care/medium/definitions",
         "care/water/watering-methods"
       ],
-      "article": true
+      "article": true,
+      "genus": "Тилландсии"
     },
     {
       "id": "lithops",
@@ -1909,7 +1931,8 @@
         "care/water/overwatering",
         "care/light/basics"
       ],
-      "article": true
+      "article": true,
+      "genus": "Суккуленты"
     },
     {
       "id": "dionaea",
@@ -2000,7 +2023,8 @@
         "care/nutrition/fertilizers",
         "care/medium/acidity"
       ],
-      "article": true
+      "article": true,
+      "genus": "Хищные"
     },
     {
       "id": "philodendron-melanochrysum",
@@ -2087,7 +2111,8 @@
       "relatedNotes": [
         "care/medium/fraction",
         "care/medium/recipes"
-      ]
+      ],
+      "genus": "Филодендроны"
     },
     {
       "id": "anthurium-crystallinum",
@@ -2177,6 +2202,496 @@
       "relatedNotes": [
         "care/medium/fraction",
         "care/medium/transplant-stress"
+      ],
+      "genus": "Антуриумы"
+    },
+    {
+      "id": "monstera-adansonii",
+      "name": "Монстера адансона",
+      "latin": "Monstera adansonii",
+      "family": "Ароидные",
+      "genus": "Монстеры",
+      "aliases": [
+        "монстера обезьянья маска"
+      ],
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Лазящая монстера с овальными листьями, продырявленными насквозь. Прорези у неё закрытые, а не разрезы до края.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "humidity": "medium",
+      "toxicToPets": true,
+      "growth": "fast",
+      "propagation": [
+        "черенки"
+      ],
+      "quirk": "Отверстия в листе закрытые: у деликатесной прорези доходят до края, у адансона — нет.",
+      "visual": {
+        "form": "vine",
+        "leaf": "split",
+        "palette": "green"
+      },
+      "tags": [
+        "ароидное",
+        "лазящее",
+        "для начинающих"
+      ]
+    },
+    {
+      "id": "philodendron-birkin",
+      "name": "Филодендрон биркин",
+      "latin": "Philodendron Birkin",
+      "family": "Ароидные",
+      "genus": "Филодендроны",
+      "rarity": "interesting",
+      "difficulty": 3,
+      "summary": "Компактный куст с белыми штрихами по листу. Рисунок нестабилен: сорт получен как мутация.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "humidity": "medium",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "черенки"
+      ],
+      "quirk": "Полоски могут исчезнуть или, наоборот, дать полностью белый лист — сорт склонен к возврату.",
+      "visual": {
+        "form": "clump",
+        "leaf": "oval",
+        "palette": "green"
+      },
+      "tags": [
+        "ароидное",
+        "пестролистное"
+      ]
+    },
+    {
+      "id": "anthurium-clarinervium",
+      "name": "Антуриум кларинервиум",
+      "latin": "Anthurium clarinervium",
+      "family": "Ароидные",
+      "genus": "Антуриумы",
+      "rarity": "rare",
+      "difficulty": 4,
+      "summary": "Плотный сердцевидный лист, почти чёрный, с широкой сеткой белых жилок.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "humidity": "high",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "деление"
+      ],
+      "quirk": "Лист жёсткий и кожистый — в отличие от бархатного кристаллинума, воду переносит спокойнее.",
+      "visual": {
+        "form": "clump",
+        "leaf": "heart",
+        "palette": "dark"
+      },
+      "tags": [
+        "ароидное",
+        "коллекционное",
+        "с рисунком жилок"
+      ]
+    },
+    {
+      "id": "alocasia-zebrina",
+      "name": "Алоказия зебрина",
+      "latin": "Alocasia zebrina",
+      "family": "Ароидные",
+      "genus": "Алоказии",
+      "rarity": "interesting",
+      "difficulty": 4,
+      "summary": "Узкие стрелы на длинных полосатых черешках. Полоски — на черешке, не на листе.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "humidity": "high",
+      "toxicToPets": true,
+      "growth": "medium",
+      "propagation": [
+        "клубеньки"
+      ],
+      "quirk": "Уходит в спячку и может сбросить все листья: клубень при этом жив.",
+      "visual": {
+        "form": "clump",
+        "leaf": "arrow",
+        "palette": "green"
+      },
+      "tags": [
+        "ароидное",
+        "коллекционное"
+      ]
+    },
+    {
+      "id": "calathea-orbifolia",
+      "name": "Калатея орбифолия",
+      "latin": "Goeppertia orbifolia",
+      "family": "Марантовые",
+      "genus": "Калатеи",
+      "rarity": "interesting",
+      "difficulty": 4,
+      "summary": "Крупные почти круглые листья с широкими серебристыми полосами.",
+      "light": "partial",
+      "water": "keep-moist",
+      "humidity": "high",
+      "toxicToPets": false,
+      "growth": "medium",
+      "propagation": [
+        "деление"
+      ],
+      "quirk": "На жёсткую воду отвечает бурыми краями — отсюда репутация капризной.",
+      "visual": {
+        "form": "clump",
+        "leaf": "round",
+        "palette": "silver"
+      },
+      "tags": [
+        "марантовое",
+        "с рисунком",
+        "требовательное"
+      ]
+    },
+    {
+      "id": "aglaonema",
+      "name": "Аглаонема",
+      "latin": "Aglaonema commutatum",
+      "family": "Ароидные",
+      "genus": "Спатифиллумы и аглаонемы",
+      "aliases": [
+        "аглонема"
+      ],
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Куст плотных листьев со светлым центром. Одно из немногих пестролистных, терпящих полутень.",
+      "light": "partial",
+      "water": "dry-top",
+      "humidity": "medium",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "черенки",
+        "деление"
+      ],
+      "quirk": "Мирится с недостатком света лучше почти всех пестролистных.",
+      "visual": {
+        "form": "clump",
+        "leaf": "oval",
+        "palette": "green"
+      },
+      "tags": [
+        "ароидное",
+        "пестролистное",
+        "для начинающих",
+        "теневыносливое"
+      ]
+    },
+    {
+      "id": "begonia-rex",
+      "name": "Бегония рекс",
+      "latin": "Begonia rex",
+      "family": "Бегониевые",
+      "genus": "Бегонии",
+      "aliases": [
+        "королевская бегония"
+      ],
+      "rarity": "interesting",
+      "difficulty": 3,
+      "summary": "Асимметричные листья с контрастным рисунком. Выращивается ради листа, не ради цветов.",
+      "light": "partial",
+      "water": "dry-top",
+      "humidity": "high",
+      "toxicToPets": true,
+      "growth": "medium",
+      "propagation": [
+        "листовые черенки",
+        "деление"
+      ],
+      "quirk": "Размножается фрагментом листа: из надреза на жилке идут новые растения.",
+      "visual": {
+        "form": "clump",
+        "leaf": "oval",
+        "palette": "dark"
+      },
+      "tags": [
+        "с рисунком",
+        "декоративнолистное"
+      ]
+    },
+    {
+      "id": "ficus-lyrata",
+      "name": "Фикус лирата",
+      "latin": "Ficus lyrata",
+      "family": "Тутовые",
+      "genus": "Фикусы",
+      "aliases": [
+        "фикус скрипичный"
+      ],
+      "rarity": "common",
+      "difficulty": 3,
+      "summary": "Крупные жёсткие листья в форме скрипки на одном стволе.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "humidity": "medium",
+      "toxicToPets": true,
+      "growth": "medium",
+      "propagation": [
+        "черенки",
+        "воздушные отводки"
+      ],
+      "quirk": "Не любит переездов: смена места часто стоит ему нескольких листьев.",
+      "visual": {
+        "form": "tree",
+        "leaf": "oval",
+        "palette": "green"
+      },
+      "tags": [
+        "крупное",
+        "древовидное"
+      ]
+    },
+    {
+      "id": "dracaena-fragrans",
+      "name": "Драцена фрагранс",
+      "latin": "Dracaena fragrans",
+      "family": "Спаржевые",
+      "genus": "Драцены и сансевиерии",
+      "aliases": [
+        "драцена душистая",
+        "массангеана"
+      ],
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Ствол с пучком широких дуговидных листьев, часто со светлой полосой по центру.",
+      "light": "partial",
+      "water": "dry-top",
+      "humidity": "medium",
+      "toxicToPets": true,
+      "growth": "slow",
+      "propagation": [
+        "черенки ствола"
+      ],
+      "quirk": "Обрезанный ствол даёт две-три новые макушки вместо одной.",
+      "visual": {
+        "form": "upright",
+        "leaf": "strap",
+        "palette": "green"
+      },
+      "tags": [
+        "древовидное",
+        "теневыносливое",
+        "для начинающих"
+      ]
+    },
+    {
+      "id": "hoya-kerrii",
+      "name": "Хойя керри",
+      "latin": "Hoya kerrii",
+      "family": "Кутровые",
+      "genus": "Хойи",
+      "aliases": [
+        "хойя-валентинка"
+      ],
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Толстые листья в форме сердца. Часто продаётся одним листом в горшке.",
+      "light": "bright-indirect",
+      "water": "dry-through",
+      "humidity": "low",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "черенки"
+      ],
+      "quirk": "Одиночный лист без узла не даст побега: он останется листом на годы.",
+      "visual": {
+        "form": "vine",
+        "leaf": "heart",
+        "palette": "green"
+      },
+      "tags": [
+        "суккулентное",
+        "неприхотливое"
+      ]
+    },
+    {
+      "id": "peperomia-argyreia",
+      "name": "Пеперомия арбузная",
+      "latin": "Peperomia argyreia",
+      "family": "Перечные",
+      "genus": "Пеперомии и пилеи",
+      "aliases": [
+        "арбузная пеперомия"
+      ],
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Округлые листья с серебристыми полосами, как корка арбуза. Черешок крепится к середине листа.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "humidity": "medium",
+      "toxicToPets": false,
+      "growth": "medium",
+      "propagation": [
+        "листовые черенки"
+      ],
+      "quirk": "Полосы — не жилки, а окраска между ними.",
+      "visual": {
+        "form": "clump",
+        "leaf": "round",
+        "palette": "silver"
+      },
+      "tags": [
+        "с рисунком",
+        "компактное"
+      ]
+    },
+    {
+      "id": "nephrolepis",
+      "name": "Нефролепис",
+      "latin": "Nephrolepis exaltata",
+      "family": "Ломариопсисовые",
+      "genus": "Папоротники",
+      "aliases": [
+        "бостонский папоротник"
+      ],
+      "rarity": "common",
+      "difficulty": 3,
+      "summary": "Пышный фонтан перистых листьев. Самый прощающий из комнатных папоротников.",
+      "light": "partial",
+      "water": "keep-moist",
+      "humidity": "high",
+      "toxicToPets": false,
+      "growth": "fast",
+      "propagation": [
+        "деление"
+      ],
+      "quirk": "Сухой воздух отзывается осыпанием мелких листочков, а не пожелтением.",
+      "visual": {
+        "form": "fern",
+        "leaf": "frond",
+        "palette": "green"
+      },
+      "tags": [
+        "папоротник",
+        "влаголюбивое"
+      ]
+    },
+    {
+      "id": "asplenium",
+      "name": "Асплениум",
+      "latin": "Asplenium nidus",
+      "family": "Костенцовые",
+      "genus": "Папоротники",
+      "aliases": [
+        "птичье гнездо",
+        "костенец"
+      ],
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Воронка цельных волнистых листьев — не рассечённых, как у остальных папоротников.",
+      "light": "partial",
+      "water": "keep-moist",
+      "humidity": "high",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "спорами"
+      ],
+      "quirk": "Воду в центр воронки не льют: там расположена точка роста.",
+      "visual": {
+        "form": "rosette",
+        "leaf": "strap",
+        "palette": "green"
+      },
+      "tags": [
+        "папоротник",
+        "теневыносливое"
+      ]
+    },
+    {
+      "id": "echeveria",
+      "name": "Эхеверия",
+      "latin": "Echeveria",
+      "family": "Толстянковые",
+      "genus": "Суккуленты",
+      "rarity": "common",
+      "difficulty": 2,
+      "summary": "Плотная розетка толстых листьев с восковым налётом.",
+      "light": "direct",
+      "water": "dry-through",
+      "humidity": "low",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "листовые черенки",
+        "детки"
+      ],
+      "quirk": "Налёт на листьях стирается пальцами и не восстанавливается.",
+      "visual": {
+        "form": "rosette",
+        "leaf": "spike",
+        "palette": "silver"
+      },
+      "tags": [
+        "суккулент",
+        "солнцелюбивое"
+      ]
+    },
+    {
+      "id": "haworthia",
+      "name": "Хавортия",
+      "latin": "Haworthia",
+      "family": "Асфоделовые",
+      "genus": "Суккуленты",
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Небольшая розетка тёмных треугольных листьев с белыми поперечными полосками.",
+      "light": "partial",
+      "water": "dry-through",
+      "humidity": "low",
+      "toxicToPets": false,
+      "growth": "slow",
+      "propagation": [
+        "детки"
+      ],
+      "quirk": "В отличие от большинства суккулентов, прямое солнце ей не нужно.",
+      "visual": {
+        "form": "rosette",
+        "leaf": "spike",
+        "palette": "dark"
+      },
+      "tags": [
+        "суккулент",
+        "компактное",
+        "для начинающих"
+      ]
+    },
+    {
+      "id": "tradescantia",
+      "name": "Традесканция",
+      "latin": "Tradescantia zebrina",
+      "family": "Коммелиновые",
+      "genus": "Традесканции",
+      "rarity": "common",
+      "difficulty": 1,
+      "summary": "Быстрая свисающая лоза с полосатыми листьями. Черенок укореняется за считаные дни.",
+      "light": "bright-indirect",
+      "water": "dry-top",
+      "humidity": "medium",
+      "toxicToPets": false,
+      "growth": "fast",
+      "propagation": [
+        "черенки"
+      ],
+      "quirk": "Быстро лысеет у основания: её регулярно обрезают и переукореняют.",
+      "visual": {
+        "form": "vine",
+        "leaf": "oval",
+        "palette": "silver"
+      },
+      "tags": [
+        "свисающее",
+        "быстрорастущее",
+        "для начинающих"
       ]
     }
   ]

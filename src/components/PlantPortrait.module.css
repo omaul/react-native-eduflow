@@ -21,6 +21,78 @@
   fill: none;
 }
 
+/* --- Authored models: veins, variegation and the pot --- */
+
+.vein {
+  stroke: var(--portrait-vein);
+  stroke-linecap: round;
+  fill: none;
+  opacity: 0.7;
+}
+
+/* Pale veins carry the pattern themselves, so they are drawn in the marking colour */
+.veinBright {
+  stroke: var(--portrait-mark);
+  stroke-linecap: round;
+  fill: none;
+}
+
+.mark {
+  fill: var(--portrait-mark);
+  stroke: none;
+}
+
+/* A margin band is a ring of two subpaths — fill the gap, not the whole blade */
+.ring {
+  fill-rule: evenodd;
+}
+
+.bloomPale {
+  fill: var(--portrait-bloom-pale);
+  stroke: none;
+}
+
+.bloomWarm {
+  fill: var(--portrait-bloom-warm);
+  stroke: none;
+}
+
+.pot {
+  fill: var(--portrait-pot);
+  stroke: none;
+}
+
+.rim {
+  fill: var(--portrait-rim);
+  stroke: none;
+}
+
+.soil {
+  stroke: var(--portrait-soil);
+  stroke-linecap: round;
+  fill: none;
+}
+
+/*
+ * The container, not the palette, carries the pot colours: a terracotta pot looks the same
+ * whichever plant is in it.
+ */
+.portrait {
+  --portrait-pot: #cbc3b4;
+  --portrait-rim: #bdb4a3;
+  --portrait-soil: #8d8674;
+  --portrait-bloom-pale: #f2f0e6;
+  --portrait-bloom-warm: #b8564f;
+}
+
+:global([data-theme='dark']) .portrait {
+  --portrait-pot: #6d6759;
+  --portrait-rim: #7c7566;
+  --portrait-soil: #4f4a41;
+  --portrait-bloom-pale: #e6e3d6;
+  --portrait-bloom-warm: #c4635b;
+}
+
 .tone0 {
   fill: var(--portrait-1);
 }
@@ -40,6 +112,8 @@
   --portrait-2: #3c6a4a;
   --portrait-3: #5f9169;
   --portrait-stem: #6b7f5a;
+  --portrait-vein: #a9c5b0;
+  --portrait-mark: #a9c4ae;
 }
 
 .dark {
@@ -47,6 +121,8 @@
   --portrait-2: #26402f;
   --portrait-3: #436a4d;
   --portrait-stem: #4e6047;
+  --portrait-vein: #7f9e88;
+  --portrait-mark: #8fae98;
 }
 
 .silver {
@@ -54,6 +130,8 @@
   --portrait-2: #799484;
   --portrait-3: #a9bfae;
   --portrait-stem: #7d8f79;
+  --portrait-vein: #e0e9e1;
+  --portrait-mark: #d3e0d6;
 }
 
 .grey {
@@ -61,6 +139,8 @@
   --portrait-2: #85897a;
   --portrait-3: #b1b6a4;
   --portrait-stem: #8b8f80;
+  --portrait-vein: #d6dacd;
+  --portrait-mark: #dde0d3;
 }
 
 /* --- Palettes: dark theme — lifted so they stay visible on #121212 --- */
@@ -70,6 +150,8 @@
   --portrait-2: #497a55;
   --portrait-3: #74a67f;
   --portrait-stem: #7d9169;
+  --portrait-vein: #b6cfbc;
+  --portrait-mark: #b3cbb8;
 }
 
 :global([data-theme='dark']) .dark {
@@ -77,6 +159,8 @@
   --portrait-2: #365a40;
   --portrait-3: #578a64;
   --portrait-stem: #607556;
+  --portrait-vein: #93b39c;
+  --portrait-mark: #9dbca6;
 }
 
 :global([data-theme='dark']) .silver {
@@ -84,6 +168,8 @@
   --portrait-2: #87a291;
   --portrait-3: #b8ccbd;
   --portrait-stem: #8b9d86;
+  --portrait-vein: #e8efe9;
+  --portrait-mark: #dae6dc;
 }
 
 :global([data-theme='dark']) .grey {
@@ -91,4 +177,6 @@
   --portrait-2: #939888;
   --portrait-3: #bfc4b3;
   --portrait-stem: #9a9e8f;
+  --portrait-vein: #e0e3d7;
+  --portrait-mark: #e6e8dd;
 }

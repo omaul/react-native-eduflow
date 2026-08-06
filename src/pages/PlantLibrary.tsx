@@ -18,6 +18,34 @@ import { ArrowLeftIcon } from '../components/Icons';
 import s from '../styles/shared.module.css';
 import c from '../styles/catalog.module.css';
 
+const UNGROUPED = 'Разное';
+
+/**
+ * Splits the grid into genus sections. Relatives sit next to each other, which is how the
+ * library is meant to be read: the difference between two calatheas is the interesting part.
+ */
+function groupByGenus(plants: Plant[]): [string, Plant[]][] {
+  const groups = new Map<string, Plant[]>();
+  for (const plant of plants) {
+    const key = plant.genus ?? UNGROUPED;
+    const bucket = groups.get(key);
+    if (bucket) bucket.push(plant);
+    else groups.set(key, [plant]);
+  }
+
+  return [...groups.entries()]
+    .map(([genus, items]): [string, Plant[]] => [
+      genus,
+      [...items].sort((a, b) => a.name.localeCompare(b.name, 'ru')),
+    ])
+    .sort(([a], [b]) => {
+      // Anything without a genus goes last, whatever it is called
+      if (a === UNGROUPED) return 1;
+      if (b === UNGROUPED) return -1;
+      return a.localeCompare(b, 'ru');
+    });
+}
+
 export default function PlantLibrary() {
   const { items, error } = useCatalog<Plant>('species/catalog.json');
   const [query, setQuery] = React.useState('');
@@ -100,30 +128,38 @@ export default function PlantLibrary() {
             </button>
           </div>
         ) : (
-          <ul className={c.grid}>
-            {visible.map((plant) => (
-              <li key={plant.id}>
-                <Link to={`/plants/${plant.id}`} className={c.card}>
-                  {plant.visual && (
-                    <span className={c.cardPortrait}>
-                      <PlantPortrait visual={plant.visual} seed={plant.id} />
-                    </span>
-                  )}
-                  <span className={c.cardName}>{plant.name}</span>
-                  <span className={c.cardLatin}>{plant.latin}</span>
-                  <span className={c.cardSummary}>{plant.summary}</span>
-                  <span className={c.cardFooter}>
-                    <span className={c.badge}>{DIFFICULTY_LABELS[plant.difficulty]}</span>
-                    <span className={c.badge}>{LIGHT_LABELS[plant.light]}</span>
-                    <span className={c.badge}>{WATER_LABELS[plant.water]}</span>
-                    {plant.rarity !== 'common' && (
-                      <span className={c.badge}>{RARITY_LABELS[plant.rarity]}</span>
-                    )}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          groupByGenus(visible).map(([genus, plants]) => (
+            <section key={genus}>
+              <h2 className={c.groupHeading}>
+                {genus}
+                <span className={c.groupCount}>{plants.length}</span>
+              </h2>
+              <ul className={c.grid}>
+                {plants.map((plant) => (
+                  <li key={plant.id}>
+                    <Link to={`/plants/${plant.id}`} className={c.card}>
+                      {plant.visual && (
+                        <span className={c.cardPortrait}>
+                          <PlantPortrait visual={plant.visual} plantId={plant.id} />
+                        </span>
+                      )}
+                      <span className={c.cardName}>{plant.name}</span>
+                      <span className={c.cardLatin}>{plant.latin}</span>
+                      <span className={c.cardSummary}>{plant.summary}</span>
+                      <span className={c.cardFooter}>
+                        <span className={c.badge}>{DIFFICULTY_LABELS[plant.difficulty]}</span>
+                        <span className={c.badge}>{LIGHT_LABELS[plant.light]}</span>
+                        <span className={c.badge}>{WATER_LABELS[plant.water]}</span>
+                        {plant.rarity !== 'common' && (
+                          <span className={c.badge}>{RARITY_LABELS[plant.rarity]}</span>
+                        )}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
         )}
       </div>
     </div>

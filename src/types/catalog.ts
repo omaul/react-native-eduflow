@@ -98,6 +98,8 @@ export interface Plant {
   name: string;
   latin: string;
   family?: string;
+  /** Groups the library grid: a genus, or a broader habit like «Суккуленты» */
+  genus?: string;
   aliases?: string[];
   rarity: Rarity;
   /** 1 — неубиваемое, 5 — требует опыта */

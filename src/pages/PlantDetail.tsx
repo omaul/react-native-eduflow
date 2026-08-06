@@ -6,7 +6,9 @@ import { useNotes } from '../hooks/useNotes';
 import { Plant, SubstrateAdvice, SubstrateComponent } from '../types/catalog';
 import { DIFFICULTY_LABELS, PLANT_FIELDS, RARITY_LABELS } from '../utils/catalogLabels';
 import MarkdownContent from '../components/md/MarkdownContent';
+import PlantGrowth from '../components/PlantGrowth';
 import PlantPortrait from '../components/PlantPortrait';
+import { findPlantModel } from '../data/plants';
 import ThemeBackground from '../components/ThemeBackground';
 import { ArrowLeftIcon } from '../components/Icons';
 import s from '../styles/shared.module.css';
@@ -99,6 +101,8 @@ export default function PlantDetail() {
       </div>
     );
 
+  const model = findPlantModel(plant.id);
+
   const params = PLANT_FIELDS.map((field) => ({ label: field.label, value: field.value(plant) })).filter(
     (row) => row.value !== null
   );
@@ -128,11 +132,12 @@ export default function PlantDetail() {
         </div>
 
         <header className={c.detailHeader}>
-          {plant.visual && (
+          {plant.visual && model && <PlantGrowth plant={plant} model={model} />}
+          {plant.visual && !model && (
             <div className={c.detailPortrait}>
               <PlantPortrait
                 visual={plant.visual}
-                seed={plant.id}
+                plantId={plant.id}
                 label={`Схематичный портрет: ${plant.name}`}
                 animated
               />
